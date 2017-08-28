@@ -364,9 +364,215 @@
 
 <hr>
 <h1 id="HTML-Attribues">HTML Attributes(속성)</h1>
+<hr>
+<p>Attributes(속성)은 HTML elements(요소)에 관한 부가 정보를 제공한다.</p>
+<hr>
+<h2>HTML Attributes(속성)</h2>
+<ul>
+    <li>모든 요소는 <strong>attributes(속성)</strong>을 가질 수 있다.</li>
+    <li>attributes(속성)은 elements(요소)에 관한 <strong>부가 정보</strong>를 제공한다.</li>
+    <li>attributes(속성)은 항상 <strong>시작 태그</strong>에 작성한다.</li>
+    <li>attributes(속성)은 보통 이름/값의 쌍으로 작성한다 : <strong>이름="값"</strong></li>
+</ul>
+<hr>
+<h2>lang 속성</h2>
+<p>문서의 언어는 <strong>&lt;<span>html</span>&gt;</strong>안에 작성할 수 있다.</p>
+<p><strong>lang</strong>속성으로 언어를 선언한다.</p>
+<p>언어를 선언하는 것은 검색 엔진과 스크린 리더와 같은 어플리케이션을 위해서 중요하다.</p>
+
+<div class="w3-panel w3-card-2 w3-light-grey">
+        <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;<br>
+                &lt;html&nbsp;lang="ko-KR"&gt;<br>
+                &lt;body&gt;<br>
+                <br>
+                ...<br>
+                <br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;<br>
+        </div>
+</div>
+<p>첫 번째 두 글자가 언어(ko)를 선언한다. 만약 dialect(방언)이 있다면 두 글자를 더 사용한다.(KR)</p>
+
+
+<hr>
+<h2>title 속성</h2>
+<p><strong>&lt;p&gt;</strong>요소에 <strong>title</strong>속성을 작성할 수 있다. title 속성의 값은 문단에 마우스를 올리면 툴팁으로 표시된다.</p>
+<div class="w3-panel w3-card-2 w3-light-grey">
+        <h3>Example</h3>
+        <div class="w3-code htmlHigh notranslate">
+                &lt;p&nbsp;title="I'm&nbsp;a&nbsp;tooltip"&gt;<br>
+                This&nbsp;is&nbsp;a&nbsp;paragraph.<br>
+                &lt;/p&gt;<br>
+        </div>
+        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_title" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
+        
+</div>
+
+
+<hr>
+
+<h2>href 속성</h2>
+<p>HTML의 링크는 <strong>&lt;a&gt;</strong>태그로 정의한다. 링크의 주소는  <strong>href</strong>속성으로 작성한다.</p>
+<div class="w3-panel w3-card-2 w3-light-grey">
+        <h3>Example</h3>
+        <div class="w3-code htmlHigh notranslate">
+                &lt;a&nbsp;href="https://www.w3schools.com"&gt;This&nbsp;is&nbsp;a&nbsp;link&lt;/a&gt;<br>
+        </div>
+        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_link" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
+        
+</div>
+<p>&lt;a&gt; 태그에 관해서 나중에 더 배우게 될 것이다.</p>
+
+<hr>
+<h2>크기 속성</h2>
+<p>HTML의 이미지는 <strong>&lt;img&gt;</strong>태그로 정의한다.</p>
+<p>원본 파일이름은  <strong>src</strong>속성으로 작성한다.</p>
+<p>이미지의 크기는  <strong>width</strong>와 <strong>height</strong> 속성으로 작성한다.</p>
+<div class="w3-panel w3-card-2 w3-light-grey">
+        <h3>Example</h3>
+        <div class="w3-code htmlHigh notranslate">
+                &lt;img&nbsp;src="w3schools.jpg"&nbsp;width="104"&nbsp;height="142"&gt;<br>
+        </div>
+        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_img" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
+        
+</div>
+<p>이미지의 크기는 픽셀로 작성된다 : width="104"는 너비가 104 픽셀이라는 뜻이다.</p>
+<p>&lt;img&gt; 태그에 관해서 나중에 더 배우게 될 것이다.</p>
+
+
+<hr>
+<h2>alt 속성</h2>
+<p>HTML의 이미지의 <strong>alt</strong>속성은 대체될 텍스트를 값으로 갖는다. 이미지가 표시되지 않을 때 사용된다.</p>
+<p>alt 속성의 값은 스크린 리더기로 읽을 수 있다. 이 방법은 웹 페이지를 "듣는" 누군가(맹인같은 사람)에게 사용될 수 있다.</p>
+<p>이미지의 크기는  <strong>width</strong>와 <strong>height</strong> 속성으로 작성한다.</p>
+<div class="w3-panel w3-card-2 w3-light-grey">
+        <h3>Example</h3>
+        <div class="w3-code htmlHigh notranslate">
+                &lt;img&nbsp;src="w3schools.jpg"&nbsp;width="104"&nbsp;height="142"&gt;<br>
+        </div>
+        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_alt" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
+        
+</div>
+<p>이미지의 크기는 픽셀로 작성된다 : width="104"는 너비가 104 픽셀이라는 뜻이다.</p>
+<p>&lt;img&gt; 태그에 관해서 나중에 더 배우게 될 것이다.</p>
+
+<hr>
+<h2>속성은 소문자로 작성하기</h2>
+<p>HTML5 표준은 속성을 소문자로 작성하는 것이 필수는 아니다.</p>
+<p>title 속성은 <b>title</b>이나 <b>TITLE</b>같이 대소문자 구분없이 작성할 수 있다.</p>
+<p>W3C는 소문자로 작성하기를 <b>권고</b>하고 XHTML과 같은 엄격한 문서형식은 소문자로 작성하는 것을 <b>요구</b>한다.</p>
+<div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+        <p>W3Schools에서는 항상 소문자 속성 이름을 사용한다.</p>
+</div>
+
+<hr>
+<h2>속성의 값을 따옴표로 감싸기</h2>
+<p>HTML5 표준은 속성의 값을 따옴표로 감싸는 것이 필수는 아니다.</p>
+<p>위 예제의 <b>href</b>속성은 아래와 같이 따옴표 없이 쓸 수 있다.</p>
+
+
+<div class="w3-panel w3-card-2 w3-light-grey">
+        <h3>Example</h3>
+        <div class="w3-code htmlHigh notranslate">
+                &lt;a&nbsp;href=https://www.w3schools.com&gt;<br>
+        </div>
+        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_noquotes" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
+        
+</div>
+
+
+<p>W3C는 따옴표를 사용하기를 <b>권고</b>하고 XHTML과 같은 엄격한 문서형식은 따옴표를 사용하는 것을 <b>요구</b>한다.</p>
 
 
 
+<p>따옴표가 꼭 필요한 경우가 있다. 이 예제에서는 title 속성의 값에 공백이 있어서 우리가 의도한대로 보여주지 않는다.</p>
+<div class="w3-panel w3-card-2 w3-light-grey">
+        <h3>Example</h3>
+        <div class="w3-code htmlHigh notranslate">
+                &lt;p&nbsp;title=About&nbsp;W3Schools&gt;<br>
+        </div>
+        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_error" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
+        
+</div>
+
+<div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+        <p>따옴표를 사용하는 것이 가장 일반적인 방법이며, 생략할 경우 에러가 발생할 수 있다. <br>
+        W3Schools에서는 항상 속성의 값에 따옴표를 사용한다.</p>
+</div>
+
+
+<hr>
+
+<p>HTML에서 속성의 값을 큰 따옴표로 감싸는 것이 일반적이지만, 작은 따옴표를 사용할 수 있다.</p>
+<p>속성의 값에 큰 따옴표가 사용되어야 하는 경우 작은 따옴표로 감쌀 수 있다.</p>
+
+<div class="w3-panel w3-card-2 w3-light-grey">
+        <div class="w3-code htmlHigh notranslate">
+                &lt;p&nbsp;title='John&nbsp;"ShotGun"&nbsp;Nelson'&gt;<br>
+        </div>
+</div>
+
+<p>또는 반대로</p>
+
+
+<div class="w3-panel w3-card-2 w3-light-grey">
+        <div class="w3-code htmlHigh notranslate">
+                &lt;p&nbsp;title="John&nbsp;'ShotGun'&nbsp;Nelson"&gt;<br>
+        </div>
+</div>
+
+<hr>
+<h2>챕터 요약</h2>
+<ul>
+    <li>모든 요소는 <b>속성</b>을 가질 수 있다.</li>
+    <li><b>title</b>속성은 "툴팁"정보를 추가할 때 사용한다.</li>
+    <li><b>href</b>속성은 링크의 주소 정보를 나타낸다.</li>
+    <li><b>width</b>와 <b>height</b>속성은 이미지의 크기를 나타낸다.</li>
+    <li><b>alt</b>속성은 스크린 리더기를 위하여 사용된다. 이미지가 표시되지 않을 때 사용되기도 한다.</li>
+    <li>우리는 항상 속성명에 <b>소문자</b>를 사용한다.</li>
+    <li>우리는 항상 속성의 값에 <b>따옴표</b>를 사용한다.</li>
+</ul>
+
+
+<hr>  
+<h2>HTML 속성들(Attributes)</h2>
+<p>아래는 HTML에서 주로 사용하는 속성들을 알파벳 순으로 보여주는 표다.</p>
+
+<table class="w3-table w3-striped w3-border">
+    <tr>
+        <th>속성</th>
+        <th>설명</th>
+    </tr>
+    <tr>
+        <td>alt</td>
+        <td>이미지가 출력되지 않을 때 대체되는 텍스트를 명시한다.</td>
+    </tr>
+    <tr>
+        <td>disabled</td>
+        <td>input 요소가 사용되지 않을 때 명시한다.</td>
+    </tr>
+    <tr>
+        <td>href</td>
+        <td>링크의 URL(웹 주소)를 명시한다.</td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>요소의 유일한 id를 명시한다.</td>
+    </tr>
+    <tr>
+        <td>src</td>
+        <td>이미지의 URL(웹 주소)를 명시한다.</td>
+    </tr>
+    <tr>
+        <td>style</td>
+        <td>요소의 inline CSS(내부 CSS) 스타일을 명시한다.</td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>요소의 부가적인 정보를 명시한다. (툴팁으로 표시된다.)</td>
+    </tr>
+</table>
 <!--여기까지 -->
 
 <hr>
