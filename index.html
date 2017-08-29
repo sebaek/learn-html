@@ -1239,7 +1239,7 @@
 
         <h2>색 명칭</h2>
         <p>HTML에서 색은 명칭을 사용해서 작성할 수 있다.</p>
-        <p>HTML은 <a target="_blank" href="https://www.w3schools.com/colors/colors_names.asp">140개의 표준 색 명칭</a>   을 지원한다.</p>
+        <p>HTML은 <a target="_blank" href="https://www.w3schools.com/colors/colors_names.asp">140개의 표준 색 명칭</a> 을 지원한다.</p>
 
         <hr>
         <h2>RGB 값</h2>
@@ -1250,46 +1250,278 @@
         <p>하얀색을 표현하기 위해서는 세가지 모든 색이 255이 되어야 한다. 즉, rgb(255, 255, 255)로 작성한다.</p>
 
         <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_colorrgb" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
-        
+
         <p>회색을 표현하기 위해서는 세가지 색이 같은 양이 정의 되어야 한다. </p>
-        
+
         <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_colorgrayrgb" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
-        
+
 
         <hr>
         <h2>HEX 값</h2>
         <p>HTML에서 색은 16진수(hexadecimal)의 값으로 표현할 수 있다. 작성법 : #RRGGBB</p>
         <p>RR은 red, GG는 green, BB는 blue의 16진수 값 00에서 FF까지다 (10진수로 0에서 255까지)</p>
         <p>예를 들어, #FF0000은 빨간색을 나타낸다. red가 가장 높은 값인 FF를 가지고 나머지 두개의 값이 00이기 때문이다.</p>
-        
+
         <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_colorhex" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
 
 
         <p>회색을 표현하기 위해 세가지 색이 같은 양이 정의 되어야 한다.</p>
         <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_colorgray" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
-  
+
 
         <hr>
         <h1 id="HTML-CSS">HTML CSS</h1>
 
+        <hr>
+        <h2>CSS로 HTML 꾸미기</h2>
+        <p><b>CSS</b>는 Cascading Style Sheets의 약자이다.</p>
+        <p>CSS는 HTML의 요소들이 어떻게 출력되어야 하는 지에 대한 내용들이다.</p>
+        <p>CSS는 작업 시간을 많이 단축시켜 준다. 여러 웹 페이지에 레이아웃을 한번에 적용할 수 있게 해준다.</p>
+        <p>CSS는 HTML 요소에 3가지 방법으로 사용할 수 있다.</p>
+        <ul>
+            <li><b>Inline 인라인</b> - HTML 요소의 style 속성을 사용함</li>
+            <li><b>Internal 내부</b> - head 요소 내부의 style 요소를 사용함</li>
+            <li><b>External 외부</b> - 외부 CSS 파일을 사용함</li>
+        </ul>
+
+        <p>가장 많이 쓰이는 방법은 CSS 파일을 만들어서 스타일을 작성하는 것이다. 하지만 예제를 쉽게 작성하고 보여주기 위해 인라인이나 내부 스타일을 사용하게 될 것이다.</p>
+
+        <hr>
+        <h2>인라인 CSS</h2>
+
+        <p>인라인 CSS는 하나의 HTML 요소에 스타일을 적용하기 위해 사용한다.</p>
+        <p>인라인 CSS는 HTML style 속성을 사용한다.</p>
+        <p>이 예제는 h1 요소의 텍스트 색을 파란색으로 설정한 것이다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;h1&nbsp;style="color:blue;"&gt;This&nbsp;is&nbsp;a&nbsp;Blue&nbsp;Heading&lt;/h1&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_inline" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>내부 CSS</h2>
+        <p>내부 CSS는 하나의 페이지에 스타일을 적용할 때 사용한다.</p>
+        <p>내부 CSS은 &lt;head&gt; 요소에 &lt;style&gt; 요소를 넣어서 작성한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;<br> &lt;html&gt;
+                <br> &lt;head&gt;
+                <br> &lt;style&gt;
+                <br> body&nbsp;{background-color:&nbsp;powderblue;}
+                <br> h1&nbsp;&nbsp;&nbsp;{color:&nbsp;blue;}
+                <br> p&nbsp;&nbsp;&nbsp;&nbsp;{color:&nbsp;red;}
+                <br> &lt;/style&gt;
+                <br> &lt;/head&gt;
+                <br> &lt;body&gt;
+                <br>
+                <br> &lt;h1&gt;This&nbsp;is&nbsp;a&nbsp;heading&lt;/h1&gt;
+                <br> &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;
+                <br>
+                <br> &lt;/body&gt;
+                <br> &lt;/html&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_internal" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
 
 
+        <hr>
+        <h2>외부 CSS</h2>
+        <p>외부 CSS은 여러 HTML 페이지에 스타일을 적용하기 위해 사용한다.</p>
+        <p>외부 스타일 시트는 하나의 파일을 사용하여 웹 사이트 전체의 스타일을 적용할 수 있도록 할 수 있다.</p>
+        <p>외부 스타일 시트를 사용하기 위해 &lt;head&gt; 요소에 &lt;link&gt; 요소를 넣어서 작성한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;<br> &lt;html&gt;
+                <br> &lt;head&gt;
+                <br> &nbsp;&nbsp;&lt;link&nbsp;rel="stylesheet"&nbsp;href="styles.css"&gt;
+                <br> &lt;/head&gt;
+                <br> &lt;body&gt;
+                <br>
+                <br> &lt;h1&gt;This&nbsp;is&nbsp;a&nbsp;heading&lt;/h1&gt;
+                <br> &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;
+                <br>
+                <br> &lt;/body&gt;
+                <br> &lt;/html&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_external" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <p>외부 스타일 시트는 텍스트 에디터를 사용해서 작성할 수 있다. 이 파일에는 HTML 코드가 들어가면 안된다. 확장자가 .css 이어야 한다.</p>
+        <p>"style.css" 파일의 내용은 다음과 같다</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
+                body&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;powderblue;
+                <br> }
+                <br> h1&nbsp;{
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;blue;
+                <br> }
+                <br> p&nbsp;{
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;red;
+                <br> }
+                <br>
+            </div>
+        </div>
+
+        <hr>
+        <h2>CSS Fonts</h2>
+        <p>CSS <b>color</b> 속성(property)는 텍스트의 색을 정하기 위해 사용한다.</p>
+        <p>CSS <b>font-family</b> 속성(property)는 글자체(font)를 정하기 위해 사용한다.</p>
+        <p>CSS <b>font-size</b> 속성(property)는 텍스트의 크기를 정하기 위해 사용한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;<br> &lt;html&gt;
+                <br> &lt;head&gt;
+                <br> &lt;style&gt;
+                <br> h1&nbsp;{
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;blue;
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;verdana;
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;300%;
+                <br> }
+                <br> p&nbsp;&nbsp;{
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;red;
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;courier;
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;160%;
+                <br> }
+                <br> &lt;/style&gt;
+                <br> &lt;/head&gt;
+                <br> &lt;body&gt;
+                <br>
+                <br> &lt;h1&gt;This&nbsp;is&nbsp;a&nbsp;heading&lt;/h1&gt;
+                <br> &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;
+                <br>
+                <br> &lt;/body&gt;
+                <br> &lt;/html&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_fonts" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
 
 
+        <hr>
+        <h2>CSS 테두리(border)</h2>
+
+        <p>CSS <b>border</b> 속성(property)는 HTML 요소(element)의 테두리(border)를 정하기 위해 사용한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                p&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;1px&nbsp;solid&nbsp;powderblue;
+                <br> }
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_borders" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+        </div>
+
+        <hr>
+        <h2>CSS 안쪽 여백(Padding)</h2>
+
+        <p>CSS <b>padding</b> 속성(property)는 텍스트와 테두리(border) 사이의 공간(padding)을 정하기 위해 사용한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                p&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;1px&nbsp;solid&nbsp;powderblue;
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;30px;
+                <br> }
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_padding" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+        </div>
 
 
+        <hr>
+        <h2>CSS 바깥쪽 여백(Margin)</h2>
+        <p>CSS <b>margin</b> 속성(property)는 테두리(border)의 바깥쪽 여백(margin)을 정하기 위해 사용한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                p&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;1px&nbsp;solid&nbsp;powderblue;
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;50px;
+                <br> }
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_margin" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+        </div>
+
+        <hr>
+
+        <h2>id 속성(Attribute)</h2>
+        <p>특별히 하나의 요소에 스타일을 적용하기 위해서 그 요소에 id 속성을 부여한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&nbsp;id="p01"&gt;I&nbsp;am&nbsp;different&lt;/p&gt;<br>
+            </div>
+        </div>
 
 
+        <p>부여된 id를 사용하여 스타일을 지정할 수 있다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                #p01&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;blue;
+                <br> }
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_id" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+        </div>
 
 
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p><strong>Note: </strong>요소의 id는 페이지 내에서 유일한 값을 가져야 한다. 따라서 id 선택자(selector)는 유일한 요소를 선택하게 된다.</p>
+        </div>
+
+        <hr>
+        <h2>class 속성(Attribute)</h2>
+        <p>어떤 특정한 요소들에게 스타일을 적용하고 싶을 때, class 속성을 부여한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&nbsp;class="error"&gt;I&nbsp;am&nbsp;different&lt;/p&gt;<br>
+            </div>
+        </div>
+
+        <p>부여된 id를 사용하여 스타일을 지정할 수 있다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                p.error&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;red;
+                <br> }
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_class" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+        </div>
+
+        <hr>
+        <h2>외부 참조</h2>
+        <p>외부 스타일 시트는 현재 웹 페이지의 상대적 경로나 URL전체를 사용하여 참조할 수 있다.</p>
+        <p>아래 예제는 URL전체를 사용하여 스타일 시트를 link 하는 방법을 보여준다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+                <h3>Example</h3>
+                <div class="w3-code htmlHigh notranslate">
+                        &lt;link&nbsp;rel="stylesheet"&nbsp;href="https://www.w3schools.com/html/styles.css"&gt;<br>
+                </div>
+                <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_external_url" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
+        </div>
 
 
-
-
-
-
-
-        
         <!--여기까지 -->
 
         <hr>
