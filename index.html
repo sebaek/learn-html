@@ -1,669 +1,1314 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
+
     <title>Learn HTML</title>
 </head>
+
 <body>
-<div class="w3-container">
-<h1 id="HTML-introduction">HTML 소개</h1>
-<hr>
-<h2>HTML이란?</h2>
-<p>HTML은 웹 페이지를 만들기 위한 표준 마크업 언어이다.</p>
-<ul>
-    <li>HTML은 Hyper Text Markup Language의 약자이다.</li>
-    <li>HTML은 마크업을 사용하여 웹 페이지의 구조를 만든다.</li>
-    <li>HTML element(요소)가 모여서 HTML 페이지를 만든다.</li>
-    <li>HTML element(요소)sms tag(태그)로 표현한다.</li>
-    <li>HTML tag(태그)의 명칭은 "heading(제목)", "paragraph(문단)", "table(테이블)"동의 단어로 파생되었다.</li>
-    <li>브라우저는 HTML tag(태그)를 보여주지 않는다. 페이지의 콘텐트를 표현하는데 사용한다.</li>
-</ul>
-<hr>
-<h2>간단한 HTML 문서</h2>
-<div class="w3-panel w3-card-2 w3-light-grey">
-    <h3>Example</h3>
-    <div class="w3-code htmlHigh notranslate">
-        &lt;!DOCTYPE&nbsp;html&gt;<br>
-        &lt;html&gt;<br>
-        &lt;head&gt;<br>
-        &lt;title&gt;Page&nbsp;Title&lt;/title&gt;<br>
-        &lt;/head&gt;<br>
-        &lt;body&gt;<br>
-        <br>
-        &lt;h1&gt;My&nbsp;First&nbsp;Heading&lt;/h1&gt;<br>
-        &lt;p&gt;My&nbsp;first&nbsp;paragraph.&lt;/p&gt;<br>
-        <br>
-        &lt;/body&gt;<br>
-        &lt;/html&gt;<br>
-    </div>
-    <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-    
-</div>
-<h3>예제 설명</h3>
-<ul>
-    <li><code class="w3-codespan">&lt;!DOCTYPE html&gt;</code>는 이 문서가 HTML5라고 정의하는 선언문이다.</li>
-    <li><code class="w3-codespan">&lt;html&gt;</code> element(요소)는 HTML 페이지의 root element(루트 요소)이다.</li>
-    <li><code class="w3-codespan">&lt;head&gt;</code> element(요소)는 문서에 관련된 메타 정보를 가진다.</li>
-    <li><code class="w3-codespan">&lt;title&gt;</code> element(요소)는 문서의 타이틀을 가진다.</li>
-    <li><code class="w3-codespan">&lt;body&gt;</code> element(요소)는 보여지는 페이지의 콘텐트를 가진다.</li>
-    <li><code class="w3-codespan">&lt;h1&gt;</code> element(요소)는 큰 제목을 정의한다.</li>
-    <li><code class="w3-codespan">&lt;p&gt;</code> element(요소)는 문단을 정의한다.</li>
-</ul>
-<hr>
-<h2>HTML Tags(태그)</h2>
-<p>HTML 태그는 앵글브래킷과 요소 이름으로 구성된다.</p>
-<div class="w3-panel w3-light-grey w3-border">
-    <p class='w3-xlarge'>&lt;tagname&gt;내부 컨텐트&lt;/tagname&gt;</p>
-</div> 
-<ul>
-    <li>HTML 태그는 보통 쌍으로 이루어진다. 예: &lt;p&gt; 와 &lt;/p&gt;</li>
-    <li>두 개 중의 앞에 있는 태그를 시작 태그(여는 태그), 뒤의 태그를 종료 태그(닫는 태그)라고 한다.</li>
-    <li>종료 태그는 시작 태그와 비슷하다. 슬래시(/)기호가 태그명 앞에 붙는다.</li>
-</ul>
-<div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
-    <p><strong>팁: </strong>시작 태그를 여는 태그, 종료 태그를 닫는 태그라고도 한다.</p>
-</div>
-<hr>
-<h2>웹 브라우저</h2>
-<p>웹 브라우저의 목적은 HTML문서를 읽고 보여주는 것이다.</p>
-<p>브라우저는 태그를 보여주지 않는다. 태그는 문서를 어떻게 보여주어야 하는지 결정하기위해 사용된다.</p>
-<p><img src="img_chrome.png" alt="브라우저로 보기" class="w3-image"></p>
-<hr>
-<h2>HTML 페이지 구조</h2>
-<p>아래는 HTML 페이지의 구조를 도식으로 나타낸다.</p>
+    <div class="w3-container">
+        <h1 id="HTML-introduction">HTML 소개</h1>
+        <hr>
+        <h2>HTML이란?</h2>
+        <p>HTML은 웹 페이지를 만들기 위한 표준 마크업 언어이다.</p>
+        <ul>
+            <li>HTML은 Hyper Text Markup Language의 약자이다.</li>
+            <li>HTML은 마크업을 사용하여 웹 페이지의 구조를 만든다.</li>
+            <li>HTML element(요소)가 모여서 HTML 페이지를 만든다.</li>
+            <li>HTML element(요소)는 tag(태그)로 표현한다.</li>
+            <li>HTML tag(태그)의 명칭은 "heading(제목)", "paragraph(문단)", "table(테이블)"등의 단어로 파생되었다.</li>
+            <li>브라우저는 HTML tag(태그)를 보여주지 않는다. 페이지의 콘텐트를 표현하는데 사용한다.</li>
+        </ul>
+        <hr>
+        <h2>간단한 HTML 문서</h2>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;<br> &lt;html&gt;
+                <br> &lt;head&gt;
+                <br> &lt;title&gt;Page&nbsp;Title&lt;/title&gt;
+                <br> &lt;/head&gt;
+                <br> &lt;body&gt;
+                <br>
+                <br> &lt;h1&gt;My&nbsp;First&nbsp;Heading&lt;/h1&gt;
+                <br> &lt;p&gt;My&nbsp;first&nbsp;paragraph.&lt;/p&gt;
+                <br>
+                <br> &lt;/body&gt;
+                <br> &lt;/html&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
 
-<div style="width:99%;border:1px solid grey;padding:3px;margin:0;background-color:#ddd">&lt;html&gt;
-    <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">&lt;head&gt;
-    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;title&gt;페이지 타이틀&lt;/title&gt;
-    </div>
-    &lt;/head&gt;
-    </div>
-    <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#ddd">&lt;body&gt;
-    <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#fff">
-    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;h1&gt;이 것은 제목입니다.&lt;/h1&gt;</div>
-    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;이 것은 문단 입니다.&lt;/p&gt;</div>
-    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;이 것은 다른 문단 입니다.&lt;/p&gt;</div>
-    </div>
-    &lt;/body&gt;
-    </div>
-    &lt;/html&gt;
-</div>
-<div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
-    <p><strong>Note: </strong>오직 &lt;body&gt;요소의 내부 콘텐트(하얀색 부분)가 브라우저에 의해 화면에 출력된다.</p>
-</div>
-<hr>
-<h2>&lt;!DOCTYPE&gt; 선언구문</h2>
-<p>&lt;!DOCTYPE&gt; 선언구문은 문서의 타입을 지정한다. 브라우저가 웹 페이지를 올바르게 표시하도록 돕는다</p>
-<p>이 구문은 한 번만 페이지 가상 상단에 작성하면된다. (HTML 태그 위에)</p>
-<p>&lt;!DOCTYPE&gt; 선언구문은 대소문자를 구별하지 않는다</p>
-<p>&lt;!DOCTYPE&gt;의 HTML5를 위한 선언구문 :</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-    <div class="w3-code htmlHigh notranslate">
-        &lt;!DOCTYPE&nbsp;html&gt;
-    </div>
-</div>
+        </div>
+        <h3>예제 설명</h3>
+        <ul>
+            <li><code class="w3-codespan">&lt;!DOCTYPE html&gt;</code>는 이 문서가 HTML5라고 정의하는 선언문이다.</li>
+            <li><code class="w3-codespan">&lt;html&gt;</code> element(요소)는 HTML 페이지의 root element(루트 요소)이다.</li>
+            <li><code class="w3-codespan">&lt;head&gt;</code> element(요소)는 문서에 관련된 메타 정보를 가진다.</li>
+            <li><code class="w3-codespan">&lt;title&gt;</code> element(요소)는 문서의 타이틀을 가진다.</li>
+            <li><code class="w3-codespan">&lt;body&gt;</code> element(요소)는 보여지는 페이지의 콘텐트를 가진다.</li>
+            <li><code class="w3-codespan">&lt;h1&gt;</code> element(요소)는 큰 제목을 정의한다.</li>
+            <li><code class="w3-codespan">&lt;p&gt;</code> element(요소)는 문단을 정의한다.</li>
+        </ul>
+        <hr>
+        <h2>HTML Tags(태그)</h2>
+        <p>HTML 태그는 앵글브래킷과 요소 이름으로 구성된다.</p>
+        <div class="w3-panel w3-light-grey w3-border">
+            <p class='w3-xlarge'>&lt;tagname&gt;내부 컨텐트&lt;/tagname&gt;</p>
+        </div>
+        <ul>
+            <li>HTML 태그는 보통 쌍으로 이루어진다. 예: &lt;p&gt; 와 &lt;/p&gt;</li>
+            <li>두 개 중의 앞에 있는 태그를 시작 태그(여는 태그), 뒤의 태그를 종료 태그(닫는 태그)라고 한다.</li>
+            <li>종료 태그는 시작 태그와 비슷하다. 슬래시(/)기호가 태그명 앞에 붙는다.</li>
+        </ul>
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p><strong>팁: </strong>시작 태그를 여는 태그, 종료 태그를 닫는 태그라고도 한다.</p>
+        </div>
+        <hr>
+        <h2>웹 브라우저</h2>
+        <p>웹 브라우저의 목적은 HTML문서를 읽고 보여주는 것이다.</p>
+        <p>브라우저는 태그를 보여주지 않는다. 태그는 문서를 어떻게 보여주어야 하는지 결정하기위해 사용된다.</p>
+        <p><img src="img_chrome.png" alt="브라우저로 보기" class="w3-image"></p>
+        <hr>
+        <h2>HTML 페이지 구조</h2>
+        <p>아래는 HTML 페이지의 구조를 도식으로 나타낸다.</p>
+
+        <div style="width:99%;border:1px solid grey;padding:3px;margin:0;background-color:#ddd">&lt;html&gt;
+            <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">&lt;head&gt;
+                <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;title&gt;페이지 타이틀&lt;/title&gt;
+                </div>
+                &lt;/head&gt;
+            </div>
+            <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#ddd">&lt;body&gt;
+                <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#fff">
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;h1&gt;이 것은 제목입니다.&lt;/h1&gt;</div>
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;이 것은 문단 입니다.&lt;/p&gt;</div>
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;이 것은 다른 문단 입니다.&lt;/p&gt;</div>
+                </div>
+                &lt;/body&gt;
+            </div>
+            &lt;/html&gt;
+        </div>
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p><strong>Note: </strong>오직 &lt;body&gt;요소의 내부 콘텐트(하얀색 부분)가 브라우저에 의해 화면에 출력된다.</p>
+        </div>
+        <hr>
+        <h2>&lt;!DOCTYPE&gt; 선언구문</h2>
+        <p>&lt;!DOCTYPE&gt; 선언구문은 문서의 타입을 지정한다. 브라우저가 웹 페이지를 올바르게 표시하도록 돕는다</p>
+        <p>이 구문은 한 번만 페이지 가상 상단에 작성하면된다. (HTML 태그 위에)</p>
+        <p>&lt;!DOCTYPE&gt; 선언구문은 대소문자를 구별하지 않는다</p>
+        <p>&lt;!DOCTYPE&gt;의 HTML5를 위한 선언구문 :</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;
+            </div>
+        </div>
 
 
 
-<!-- -->
-<hr>
-<h1 id="HTML-Basic">HTML 기본 예제들</h1>
-<hr>
-<p>여기 예제들이 아직 배우지 않은 태그들이 있어도 걱정하지 마세요.</p>
-<p>다음 챕터들에서 그 태그들을 배울 것입니다.</p>
-<hr>
-<h2>HTML 문서</h2>
-<p>모든 HTML 문서는 <strong>&lt;!DOCTYPE html&gt;</strong> 선언구문으로 시작되어야 한다.</p>
-<p>HTML 문서는 <strong>&lt;html&gt;</strong>로 시작하고 <strong>&lt;/html&gt;</strong>로 끝난다.</p>
-<p>HTML 문서에서 보여지는 부분은 <strong>&lt;body&gt;</strong>와 <strong>&lt;/body&gt;</strong>의 사이에 있는 부분이다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
-                &lt;!DOCTYPE&nbsp;html&gt;<br>
-                &lt;html&gt;<br>
+        <!-- -->
+        <hr>
+        <h1 id="HTML-Basic">HTML 기본 예제들</h1>
+        <hr>
+        <p>여기 예제들이 아직 배우지 않은 태그들이 있어도 걱정하지 마세요.</p>
+        <p>다음 챕터들에서 그 태그들을 배울 것입니다.</p>
+        <hr>
+        <h2>HTML 문서</h2>
+        <p>모든 HTML 문서는 <strong>&lt;!DOCTYPE html&gt;</strong> 선언구문으로 시작되어야 한다.</p>
+        <p>HTML 문서는 <strong>&lt;html&gt;</strong>로 시작하고 <strong>&lt;/html&gt;</strong>로 끝난다.</p>
+        <p>HTML 문서에서 보여지는 부분은 <strong>&lt;body&gt;</strong>와 <strong>&lt;/body&gt;</strong>의 사이에 있는 부분이다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;<br> &lt;html&gt;
+                <br> &lt;body&gt;
+                <br>
+                <br> &lt;h1&gt;My&nbsp;First&nbsp;Heading&lt;/h1&gt;
+                <br> &lt;p&gt;My&nbsp;first&nbsp;paragraph.&lt;/p&gt;
+                <br>
+                <br> &lt;/body&gt;
+                <br> &lt;/html&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+        <hr>
+        <h2>HTML 제목</h2>
+        <p>HTML 문서의 제목은 <strong>&lt;h1&gt;</strong>부터 <strong>&lt;h6&gt;</strong>까지의 태그를 사용한다.</p>
+        <p>&lt;h1&gt;가 가장 중요한 제목이다. &lt;h6&gt;가 가장 덜 중요한 제목이다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;h1&gt;This&nbsp;is&nbsp;heading&nbsp;1&lt;/h1&gt;<br> &lt;h2&gt;This&nbsp;is&nbsp;heading&nbsp;2&lt;/h2&gt;
+                <br> &lt;h3&gt;This&nbsp;is&nbsp;heading&nbsp;3&lt;/h3&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_headings" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+        </div>
+
+
+        <hr>
+        <h2>HTML 문단(Paragraphs)</h2>
+        <p>HTML 문단은 <strong>&lt;p&gt;</strong> 태그로 작성한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;<br> &lt;p&gt;This&nbsp;is&nbsp;another&nbsp;paragraph.&lt;/p&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_paragraphs" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+        <hr>
+        <h2>HTML 링크</h2>
+        <p>HTML 링크는 <strong>&lt;a&gt;</strong> 태그로 작성한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt; </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_link" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+
+        <hr>
+        <h2>HTML 이미지</h2>
+        <p>HTML 이미지는 <strong>&lt;img&gt;</strong> 태그로 작성한다.</p>
+        <p>원본 파일(src), 대체 텍스트(alt), 너비(width), 높이(height)는 attributes(속성)으로 작성한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"&gt; </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_img" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <hr>
+        <h1 id="HTML-Elements">HTML Elements(요소)</h1>
+        <h2>HTML Elements(요소)</h2>
+        <p>HTML 요소는 보통 <strong>시작</strong>태그와 <strong>종료</strong>태그, 그 사이의 콘텐트로 구성된다.</p>
+        <div class="htmlHigh" style="font-size:20px;padding:10px;margin-bottom:10px;">
+            <span style="color:brown"><span style="color:mediumblue">&lt;</span>태그명<span style="color:mediumblue">&gt;</span></span>콘텐트가
+            들어감...
+            <span style="color:brown"><span style="color:mediumblue">&lt;</span>/태그명<span style="color:mediumblue">&gt;</span></span>
+        </div>
+
+
+        <p>시작 태그부터 종료 태그까지 모두 HTML 요소(element)라고 한다.</p>
+        <div class="htmlHigh" style="font-size:20px;padding:10px;margin-bottom:10px;">
+            <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span style="color:mediumblue">&gt;</span></span>내
+            첫번째 문단.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span>
+        </div>
+
+        <table class="w3-table w3-striped w3-border">
+            <tr>
+                <th>시작 태그</th>
+                <th>요소 콘텐트</th>
+                <th>종료 태그</th>
+            </tr>
+            <tr>
+                <td>&lt;<span>h1</span>&gt;</td>
+                <td>내 첫번째 제목</td>
+                <td>&lt;<span>/h1</span>&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;<span>p</span>&gt;</td>
+                <td>내 첫번째 문단.</td>
+                <td>&lt;<span>/p</span>&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;<span>br</span>&gt;</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p>콘텐트가 없는 HTML요소를 빈 요소(empty element)라고 한다. &lt;<span>br</span>&gt;(줄 변경)같은 빈 요소는 종료 태그를 갖지 않는다. </p>
+        </div>
+        <hr>
+        <h2>중첩된 HTML 요소</h2>
+        <p>HTML 요소는 중첩될 수 있다. (요소 안에 요소가 들어갈 수 있다.)</p>
+        <p>모든 HTML 문서는 중첩된 HTML 요소로 구성되어 있다.</p>
+        <p>네 개의 HTML 요소로 구성된 예제 : </p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;<br> &lt;html&gt;
+                <br> &lt;body&gt;
+                <br>
+                <br> &lt;h1&gt;내 첫번째 제목&lt;/h1&gt;<br> &lt;p&gt;내 첫번째 문단.&lt;/p&gt;<br>
+                <br> &lt;/body&gt;
+                <br> &lt;/html&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elements" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+        <h3>예제 설명</h3>
+        <p><strong>&lt;<span>html</span>&gt;</strong>요소는 <strong>모든 문서</strong>를 정의한다.</p>
+        <p><strong>시작</strong> 태그&lt;<span>html</span>&gt;와 <strong>종료</strong> 태그&lt;<span>/html</span>&gt;로 구성된다.</p>
+        <p>요소의 <strong>콘텐트</strong>는 다른 HTML 요소(&lt;<span>body</span>&gt; 요소) 이다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
+                &lt;html&gt;<br> &lt;body&gt;
+                <br>
+                <br> &lt;h1&gt;내 첫번째 제목&lt;/h1&gt;<br> &lt;p&gt;내 첫번째 문단.&lt;/p&gt;<br>
+                <br> &lt;/body&gt;
+                <br> &lt;/html&gt;
+                <br>
+            </div>
+        </div>
+
+        <p><strong>&lt;<span>body</span>&gt;</strong>요소는 <strong>문서의 body(본체)</strong>를 정의한다.</p>
+        <p><strong>시작</strong> 태그&lt;<span>body</span>&gt;와 <strong>종료</strong> 태그&lt;<span>/body</span>&gt;로 구성된다.</p>
+        <p>요소의 <strong>콘텐트</strong>는 두 개의 다른 HTML 요소(&lt;<span>h1</span>&gt;과 &lt;<span>p</span>&gt; 요소) 이다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
                 &lt;body&gt;<br>
+                <br> &lt;h1&gt;내 첫번째 제목&lt;/h1&gt;<br> &lt;p&gt;내 첫번째 문단.&lt;/p&gt;<br>
+                <br> &lt;/body&gt;
                 <br>
-                &lt;h1&gt;My&nbsp;First&nbsp;Heading&lt;/h1&gt;<br>
-                &lt;p&gt;My&nbsp;first&nbsp;paragraph.&lt;/p&gt;<br>
-                <br>
-                &lt;/body&gt;<br>
-                &lt;/html&gt;<br>
+            </div>
         </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
 
 
-<hr>
-<h2>HTML 제목</h2>
-<p>HTML 문서의 제목은 <strong>&lt;h1&gt;</strong>부터 <strong>&lt;h6&gt;</strong>까지의 태그를 사용한다.</p>
-<p>&lt;h1&gt;가 가장 중요한 제목이다. &lt;h6&gt;가 가장 덜 중요한 제목이다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
-                &lt;h1&gt;This&nbsp;is&nbsp;heading&nbsp;1&lt;/h1&gt;<br>
-                &lt;h2&gt;This&nbsp;is&nbsp;heading&nbsp;2&lt;/h2&gt;<br>
-                &lt;h3&gt;This&nbsp;is&nbsp;heading&nbsp;3&lt;/h3&gt;<br>
-        </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_headings" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-</div>
-
-
-<hr>
-<h2>HTML 문단(Paragraphs)</h2>
-<p>HTML 문단은 <strong>&lt;p&gt;</strong> 태그로 작성한다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
-                &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;<br>
-                &lt;p&gt;This&nbsp;is&nbsp;another&nbsp;paragraph.&lt;/p&gt;<br>
-        </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_paragraphs" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
-
-
-<hr>
-<h2>HTML 링크</h2>
-<p>HTML 링크는 <strong>&lt;a&gt;</strong> 태그로 작성한다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
-                &lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;        </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_link" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
-
-
-
-<hr>
-<h2>HTML 이미지</h2>
-<p>HTML 이미지는 <strong>&lt;img&gt;</strong> 태그로 작성한다.</p>
-<p>원본 파일(src), 대체 텍스트(alt), 너비(width), 높이(height)는 attributes(속성)으로 작성한다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
-                &lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"&gt;        </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_img" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
-
-
-
-
-
-
-
-
-
-
-<hr>
-<h1 id="HTML-Elements">HTML Elements(요소)</h1>
-<h2>HTML Elements(요소)</h2>
-<p>HTML 요소는 보통 <strong>시작</strong>태그와 <strong>종료</strong>태그, 그 사이의 콘텐트로 구성된다.</p>
-<div class="htmlHigh" style="font-size:20px;padding:10px;margin-bottom:10px;">
-        <span style="color:brown"><span style="color:mediumblue">&lt;</span>태그명<span style="color:mediumblue">&gt;</span></span>콘텐트가 들어감...<span style="color:brown"><span style="color:mediumblue">&lt;</span>/태그명<span style="color:mediumblue">&gt;</span></span>
-</div>
-
-
-<p>시작 태그부터 종료 태그까지 모두 HTML 요소(element)라고 한다.</p>
-<div class="htmlHigh" style="font-size:20px;padding:10px;margin-bottom:10px;">
-        <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span style="color:mediumblue">&gt;</span></span>내 첫번째 문단.<span style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span style="color:mediumblue">&gt;</span></span>
-</div>
-
-<table class="w3-table w3-striped w3-border">
-    <tr>
-        <th>시작 태그</th>
-        <th>요소 콘텐트</th>
-        <th>종료 태그</th>
-    </tr>
-    <tr>
-        <td>&lt;<span>h1</span>&gt;</td>
-        <td>내 첫번째 제목</td>
-        <td>&lt;<span>/h1</span>&gt;</td>
-    </tr>
-    <tr>
-        <td>&lt;<span>p</span>&gt;</td>
-        <td>내 첫번째 문단.</td>
-        <td>&lt;<span>/p</span>&gt;</td>
-    </tr>
-    <tr>
-        <td>&lt;<span>br</span>&gt;</td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-
-<div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
-        <p>콘텐트가 없는 HTML요소를 빈 요소(empty element)라고 한다. &lt;<span>br</span>&gt;(줄 변경)같은 빈 요소는 종료 태그를 갖지 않는다. </p>
-</div>
-<hr>
-<h2>중첩된 HTML 요소</h2>
-<p>HTML 요소는 중첩될 수 있다. (요소 안에 요소가 들어갈 수 있다.)</p>
-<p>모든 HTML 문서는 중첩된 HTML 요소로 구성되어 있다.</p>
-<p>네 개의 HTML 요소로 구성된 예제 : </p>
-
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
-                &lt;!DOCTYPE&nbsp;html&gt;<br>
-                &lt;html&gt;<br>
-                &lt;body&gt;<br>
-                <br>
+        <p><strong>&lt;<span>h1</span>&gt;</strong>요소는 <strong>제목</strong>를 정의한다.</p>
+        <p><strong>시작</strong> 태그&lt;<span>h1</span>&gt;와 <strong>종료</strong> 태그&lt;<span>/h1</span>&gt;로 구성된다.</p>
+        <p>요소의 <strong>콘텐트</strong>는 : 내 첫번째 제목</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
                 &lt;h1&gt;내 첫번째 제목&lt;/h1&gt;<br>
+            </div>
+        </div>
+
+
+        <p><strong>&lt;<span>p</span>&gt;</strong>요소는 <strong>문단</strong>를 정의한다.</p>
+        <p><strong>시작</strong> 태그&lt;<span>p</span>&gt;와 <strong>종료</strong> 태그&lt;<span>/p</span>&gt;로 구성된다.</p>
+        <p>요소의 <strong>콘텐트</strong>는 : 내 첫번째 문단</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
                 &lt;p&gt;내 첫번째 문단.&lt;/p&gt;<br>
-                <br>
-                &lt;/body&gt;<br>
-                &lt;/html&gt;<br>
+            </div>
         </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elements" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
-<h3>예제 설명</h3>
-<p><strong>&lt;<span>html</span>&gt;</strong>요소는 <strong>모든 문서</strong>를 정의한다.</p>
-<p><strong>시작</strong> 태그&lt;<span>html</span>&gt;와 <strong>종료</strong> 태그&lt;<span>/html</span>&gt;로 구성된다.</p>
-<p>요소의 <strong>콘텐트</strong>는 다른 HTML 요소(&lt;<span>body</span>&gt; 요소) 이다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <div class="w3-code htmlHigh notranslate">
-                &lt;html&gt;<br>
-                &lt;body&gt;<br>
+
+        <hr>
+
+        <h2>종료 태그를 생략하지 마세요</h2>
+        <p>어떤 HTML 요소들은 종료 태그를 생략해도 바르게 출력 된다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;html&gt;<br> &lt;body&gt;
                 <br>
-                &lt;h1&gt;내 첫번째 제목&lt;/h1&gt;<br>
-                &lt;p&gt;내 첫번째 문단.&lt;/p&gt;<br>
+                <br> &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph
+                <br> &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph
                 <br>
-                &lt;/body&gt;<br>
-                &lt;/html&gt;<br>
+                <br> &lt;/body&gt;
+                <br> &lt;/html&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_no_endtag" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
         </div>
-</div>
 
-<p><strong>&lt;<span>body</span>&gt;</strong>요소는 <strong>문서의 body(본체)</strong>를 정의한다.</p>
-<p><strong>시작</strong> 태그&lt;<span>body</span>&gt;와 <strong>종료</strong> 태그&lt;<span>/body</span>&gt;로 구성된다.</p>
-<p>요소의 <strong>콘텐트</strong>는 두 개의 다른 HTML 요소(&lt;<span>h1</span>&gt;과 &lt;<span>p</span>&gt; 요소) 이다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <div class="w3-code htmlHigh notranslate">
-                &lt;body&gt;<br>
-                <br>
-                &lt;h1&gt;내 첫번째 제목&lt;/h1&gt;<br>
-                &lt;p&gt;내 첫번째 문단.&lt;/p&gt;<br>
-                <br>
-                &lt;/body&gt;<br>
+        <p>위 예제는 종료 태그를 생략 할 수 있다고 판단한 모든 브라우저에서 잘 출력된다.</p>
+        <p><strong>절대 이렇게 작성하지 말 것. 만약 종료 태그를 생략하면 예기치 않은 결과나 에러가 나타난다.</strong></p>
+
+        <hr>
+        <h2>빈 HTML 요소</h2>
+        <p>컨텐트가 없는 HTML 요소를 빈 요소(empty element)라고 한다.</p>
+        <p>&lt;<span>br</span>&gt;은 종료 태그가 없는 빈 요소이다. (&lt;<span>br</span>&gt;은 줄 바꿈을 정의한다.)</p>
+        <p>빈 요소는 &lt;<span>br /</span>&gt;와 같이 시작 태그에서 종료할 수 있다.</p>
+        <p>HTML5에서는 빈 요소를 종료하는 것이 필수가 아니다. 엄격한 구문을 원하거나 XML 파서가 읽을 수 있는 문서로 만들기 위한다면 모든 HTML 요소를 적절하게 종료해야 한다.</p>
+
+        <hr>
+        <h2>소문자 태그 사용</h2>
+        <p>HTML 태그는 대소문자를 구분하지 않는다.: &lt;<span>P</span>&gt;는 &lt;<span>p</span>&gt;와 같다.</p>
+        <p>HTML5 표준에서 태그를 소문자로 하는 것이 필수사항은 아니지만 W3C에서는 HTML에서 소문자를 사용하도록 <strong>권고</strong>하고 있으며, XHTML 같은 엄격한 형식의 문서는 소문자를
+            <strong>요구</strong>한다.</p>
+
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p>W3Schools에서는 항상 소문자 태그를 사용한다.</p>
         </div>
-</div>
 
 
-<p><strong>&lt;<span>h1</span>&gt;</strong>요소는 <strong>제목</strong>를 정의한다.</p>
-<p><strong>시작</strong> 태그&lt;<span>h1</span>&gt;와 <strong>종료</strong> 태그&lt;<span>/h1</span>&gt;로 구성된다.</p>
-<p>요소의 <strong>콘텐트</strong>는 : 내 첫번째 제목</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <div class="w3-code htmlHigh notranslate">
-                &lt;h1&gt;내 첫번째 제목&lt;/h1&gt;<br>
-        </div>
-</div>
 
 
-<p><strong>&lt;<span>p</span>&gt;</strong>요소는 <strong>문단</strong>를 정의한다.</p>
-<p><strong>시작</strong> 태그&lt;<span>p</span>&gt;와 <strong>종료</strong> 태그&lt;<span>/p</span>&gt;로 구성된다.</p>
-<p>요소의 <strong>콘텐트</strong>는 : 내 첫번째 문단</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <div class="w3-code htmlHigh notranslate">
-                &lt;p&gt;내 첫번째 문단.&lt;/p&gt;<br>
-        </div>
-</div>
 
-<hr>
 
-<h2>종료 태그를 생략하지 마세요</h2>
-<p>어떤 HTML 요소들은 종료 태그를 생략해도 바르게 출력 된다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
-                &lt;html&gt;<br>
-                &lt;body&gt;<br>
+
+
+
+
+        <hr>
+        <h1 id="HTML-Attribues">HTML Attributes(속성)</h1>
+        <hr>
+        <p>Attributes(속성)은 HTML elements(요소)에 관한 부가 정보를 제공한다.</p>
+        <hr>
+        <h2>HTML Attributes(속성)</h2>
+        <ul>
+            <li>모든 요소는 <strong>attributes(속성)</strong>을 가질 수 있다.</li>
+            <li>attributes(속성)은 elements(요소)에 관한 <strong>부가 정보</strong>를 제공한다.</li>
+            <li>attributes(속성)은 항상 <strong>시작 태그</strong>에 작성한다.</li>
+            <li>attributes(속성)은 보통 이름/값의 쌍으로 작성한다 : <strong>이름="값"</strong></li>
+        </ul>
+        <hr>
+        <h2>lang 속성</h2>
+        <p>문서의 언어는 <strong>&lt;<span>html</span>&gt;</strong>안에 작성할 수 있다.</p>
+        <p><strong>lang</strong>속성으로 언어를 선언한다.</p>
+        <p>언어를 선언하는 것은 검색 엔진과 스크린 리더와 같은 어플리케이션을 위해서 중요하다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;<br> &lt;html&nbsp;lang="ko-KR"&gt;
+                <br> &lt;body&gt;
                 <br>
-                &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph<br>
-                &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph<br>
+                <br> ...
                 <br>
-                &lt;/body&gt;<br>
-                &lt;/html&gt;<br>
-        </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_no_endtag" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
-
-<p>위 예제는 종료 태그를 생략 할 수 있다고 판단한 모든 브라우저에서 잘 출력된다.</p>
-<p><strong>절대 이렇게 작성하지 말 것. 만약 종료 태그를 생략하면 예기치 않은 결과나 에러가 나타난다.</strong></p>
-
-<hr>
-<h2>빈 HTML 요소</h2>
-<p>컨텐트가 없는 HTML 요소를 빈 요소(empty element)라고 한다.</p>
-<p>&lt;<span>br</span>&gt;은 종료 태그가 없는 빈 요소이다. (&lt;<span>br</span>&gt;은 줄 바꿈을 정의한다.)</p>
-<p>빈 요소는 &lt;<span>br /</span>&gt;와 같이 시작 태그에서 종료할 수 있다.</p>
-<p>HTML5에서는 빈 요소를 종료하는 것이 필수가 아니다. 엄격한 구문을 원하거나 XML 파서가 읽을 수 있는 문서로 만들기 위한다면 모든 HTML 요소를 적절하게 종료해야 한다.</p>
-
-<hr>
-<h2>소문자 태그 사용</h2>
-<p>HTML 태그는 대소문자를 구분하지 않는다.: &lt;<span>P</span>&gt;는 &lt;<span>p</span>&gt;와 같다.</p>
-<p>HTML5 표준에서 태그를 소문자로 하는 것이 필수사항은 아니지만 W3C에서는 HTML에서 소문자를 사용하도록 <strong>권고</strong>하고 있으며, XHTML 같은 엄격한 형식의 문서는 소문자를 <strong>요구</strong>한다.</p>
-
-<div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
-        <p>W3Schools에서는 항상 소문자 태그를 사용한다.</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-<hr>
-<h1 id="HTML-Attribues">HTML Attributes(속성)</h1>
-<hr>
-<p>Attributes(속성)은 HTML elements(요소)에 관한 부가 정보를 제공한다.</p>
-<hr>
-<h2>HTML Attributes(속성)</h2>
-<ul>
-    <li>모든 요소는 <strong>attributes(속성)</strong>을 가질 수 있다.</li>
-    <li>attributes(속성)은 elements(요소)에 관한 <strong>부가 정보</strong>를 제공한다.</li>
-    <li>attributes(속성)은 항상 <strong>시작 태그</strong>에 작성한다.</li>
-    <li>attributes(속성)은 보통 이름/값의 쌍으로 작성한다 : <strong>이름="값"</strong></li>
-</ul>
-<hr>
-<h2>lang 속성</h2>
-<p>문서의 언어는 <strong>&lt;<span>html</span>&gt;</strong>안에 작성할 수 있다.</p>
-<p><strong>lang</strong>속성으로 언어를 선언한다.</p>
-<p>언어를 선언하는 것은 검색 엔진과 스크린 리더와 같은 어플리케이션을 위해서 중요하다.</p>
-
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <div class="w3-code htmlHigh notranslate">
-                &lt;!DOCTYPE&nbsp;html&gt;<br>
-                &lt;html&nbsp;lang="ko-KR"&gt;<br>
-                &lt;body&gt;<br>
+                <br> &lt;/body&gt;
+                <br> &lt;/html&gt;
                 <br>
-                ...<br>
+            </div>
+        </div>
+        <p>첫 번째 두 글자가 언어(ko)를 선언한다. 만약 dialect(방언)이 있다면 두 글자를 더 사용한다.(KR)</p>
+
+
+        <hr>
+        <h2>title 속성</h2>
+        <p><strong>&lt;p&gt;</strong>요소에 <strong>title</strong>속성을 작성할 수 있다. title 속성의 값은 문단에 마우스를 올리면 툴팁으로 표시된다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&nbsp;title="I'm&nbsp;a&nbsp;tooltip"&gt;<br> This&nbsp;is&nbsp;a&nbsp;paragraph.
+                <br> &lt;/p&gt;
                 <br>
-                &lt;/body&gt;<br>
-                &lt;/html&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_title" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
         </div>
-</div>
-<p>첫 번째 두 글자가 언어(ko)를 선언한다. 만약 dialect(방언)이 있다면 두 글자를 더 사용한다.(KR)</p>
 
 
-<hr>
-<h2>title 속성</h2>
-<p><strong>&lt;p&gt;</strong>요소에 <strong>title</strong>속성을 작성할 수 있다. title 속성의 값은 문단에 마우스를 올리면 툴팁으로 표시된다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
-                &lt;p&nbsp;title="I'm&nbsp;a&nbsp;tooltip"&gt;<br>
-                This&nbsp;is&nbsp;a&nbsp;paragraph.<br>
-                &lt;/p&gt;<br>
-        </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_title" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
+        <hr>
 
-
-<hr>
-
-<h2>href 속성</h2>
-<p>HTML의 링크는 <strong>&lt;a&gt;</strong>태그로 정의한다. 링크의 주소는  <strong>href</strong>속성으로 작성한다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
+        <h2>href 속성</h2>
+        <p>HTML의 링크는 <strong>&lt;a&gt;</strong>태그로 정의한다. 링크의 주소는 <strong>href</strong>속성으로 작성한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
                 &lt;a&nbsp;href="https://www.w3schools.com"&gt;This&nbsp;is&nbsp;a&nbsp;link&lt;/a&gt;<br>
-        </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_link" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
-<p>&lt;a&gt; 태그에 관해서 나중에 더 배우게 될 것이다.</p>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_link" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
 
-<hr>
-<h2>크기 속성</h2>
-<p>HTML의 이미지는 <strong>&lt;img&gt;</strong>태그로 정의한다.</p>
-<p>원본 파일이름은  <strong>src</strong>속성으로 작성한다.</p>
-<p>이미지의 크기는  <strong>width</strong>와 <strong>height</strong> 속성으로 작성한다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
+        </div>
+        <p>&lt;a&gt; 태그에 관해서 나중에 더 배우게 될 것이다.</p>
+
+        <hr>
+        <h2>크기 속성</h2>
+        <p>HTML의 이미지는 <strong>&lt;img&gt;</strong>태그로 정의한다.</p>
+        <p>원본 파일이름은 <strong>src</strong>속성으로 작성한다.</p>
+        <p>이미지의 크기는 <strong>width</strong>와 <strong>height</strong> 속성으로 작성한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
                 &lt;img&nbsp;src="w3schools.jpg"&nbsp;width="104"&nbsp;height="142"&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_img" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
         </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_img" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
-<p>이미지의 크기는 픽셀로 작성된다 : width="104"는 너비가 104 픽셀이라는 뜻이다.</p>
-<p>&lt;img&gt; 태그에 관해서 나중에 더 배우게 될 것이다.</p>
+        <p>이미지의 크기는 픽셀로 작성된다 : width="104"는 너비가 104 픽셀이라는 뜻이다.</p>
+        <p>&lt;img&gt; 태그에 관해서 나중에 더 배우게 될 것이다.</p>
 
 
-<hr>
-<h2>alt 속성</h2>
-<p>HTML의 이미지의 <strong>alt</strong>속성은 대체될 텍스트를 값으로 갖는다. 이미지가 표시되지 않을 때 사용된다.</p>
-<p>alt 속성의 값은 스크린 리더기로 읽을 수 있다. 이 방법은 웹 페이지를 "듣는" 누군가(맹인같은 사람)에게 사용될 수 있다.</p>
-<p>이미지의 크기는  <strong>width</strong>와 <strong>height</strong> 속성으로 작성한다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
-                &lt;img&nbsp;src="w3schools.jpg"&nbsp;width="104"&nbsp;height="142"&gt;<br>
+        <hr>
+        <h2>alt 속성</h2>
+        <p>HTML의 이미지의 <strong>alt</strong>속성은 대체될 텍스트를 값으로 갖는다. 이미지가 표시되지 않을 때 사용된다.</p>
+        <p>alt 속성의 값은 스크린 리더기로 읽을 수 있다. 이 방법은 웹 페이지를 "듣는" 누군가(맹인같은 사람)에게 사용될 수 있다.</p>
+        <p>이미지의 크기는 <strong>width</strong>와 <strong>height</strong> 속성으로 작성한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;img&nbsp;src="w3schools.jpg"&nbsp;alt="W3Schools.com"&nbsp;width="104"&nbsp;height="142"&gt;<br> </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_alt" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
         </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_alt" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
-<p>이미지의 크기는 픽셀로 작성된다 : width="104"는 너비가 104 픽셀이라는 뜻이다.</p>
-<p>&lt;img&gt; 태그에 관해서 나중에 더 배우게 될 것이다.</p>
+        <p>이미지의 크기는 픽셀로 작성된다 : width="104"는 너비가 104 픽셀이라는 뜻이다.</p>
+        <p>&lt;img&gt; 태그에 관해서 나중에 더 배우게 될 것이다.</p>
 
-<hr>
-<h2>속성은 소문자로 작성하기</h2>
-<p>HTML5 표준은 속성을 소문자로 작성하는 것이 필수는 아니다.</p>
-<p>title 속성은 <b>title</b>이나 <b>TITLE</b>같이 대소문자 구분없이 작성할 수 있다.</p>
-<p>W3C는 소문자로 작성하기를 <b>권고</b>하고 XHTML과 같은 엄격한 문서형식은 소문자로 작성하는 것을 <b>요구</b>한다.</p>
-<div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
-        <p>W3Schools에서는 항상 소문자 속성 이름을 사용한다.</p>
-</div>
+        <hr>
+        <h2>속성은 소문자로 작성하기</h2>
+        <p>HTML5 표준은 속성을 소문자로 작성하는 것이 필수는 아니다.</p>
+        <p>title 속성은 <b>title</b>이나 <b>TITLE</b>같이 대소문자 구분없이 작성할 수 있다.</p>
+        <p>W3C는 소문자로 작성하기를 <b>권고</b>하고 XHTML과 같은 엄격한 문서형식은 소문자로 작성하는 것을 <b>요구</b>한다.</p>
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p>W3Schools에서는 항상 소문자 속성 이름을 사용한다.</p>
+        </div>
 
-<hr>
-<h2>속성의 값을 따옴표로 감싸기</h2>
-<p>HTML5 표준은 속성의 값을 따옴표로 감싸는 것이 필수는 아니다.</p>
-<p>위 예제의 <b>href</b>속성은 아래와 같이 따옴표 없이 쓸 수 있다.</p>
+        <hr>
+        <h2>속성의 값을 따옴표로 감싸기</h2>
+        <p>HTML5 표준은 속성의 값을 따옴표로 감싸는 것이 필수는 아니다.</p>
+        <p>위 예제의 <b>href</b>속성은 아래와 같이 따옴표 없이 쓸 수 있다.</p>
 
 
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
                 &lt;a&nbsp;href=https://www.w3schools.com&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_noquotes" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
         </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_noquotes" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
 
 
-<p>W3C는 따옴표를 사용하기를 <b>권고</b>하고 XHTML과 같은 엄격한 문서형식은 따옴표를 사용하는 것을 <b>요구</b>한다.</p>
+        <p>W3C는 따옴표를 사용하기를 <b>권고</b>하고 XHTML과 같은 엄격한 문서형식은 따옴표를 사용하는 것을 <b>요구</b>한다.</p>
 
 
 
-<p>따옴표가 꼭 필요한 경우가 있다. 이 예제에서는 title 속성의 값에 공백이 있어서 우리가 의도한대로 보여주지 않는다.</p>
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <h3>Example</h3>
-        <div class="w3-code htmlHigh notranslate">
+        <p>따옴표가 꼭 필요한 경우가 있다. 이 예제에서는 title 속성의 값에 공백이 있어서 우리가 의도한대로 보여주지 않는다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
                 &lt;p&nbsp;title=About&nbsp;W3Schools&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_error" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
         </div>
-        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_error" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
-        
-</div>
 
-<div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
-        <p>따옴표를 사용하는 것이 가장 일반적인 방법이며, 생략할 경우 에러가 발생할 수 있다. <br>
-        W3Schools에서는 항상 속성의 값에 따옴표를 사용한다.</p>
-</div>
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p>따옴표를 사용하는 것이 가장 일반적인 방법이며, 생략할 경우 에러가 발생할 수 있다. <br> W3Schools에서는 항상 속성의 값에 따옴표를 사용한다.</p>
+        </div>
 
 
-<hr>
+        <hr>
 
-<p>HTML에서 속성의 값을 큰 따옴표로 감싸는 것이 일반적이지만, 작은 따옴표를 사용할 수 있다.</p>
-<p>속성의 값에 큰 따옴표가 사용되어야 하는 경우 작은 따옴표로 감쌀 수 있다.</p>
+        <p>HTML에서 속성의 값을 큰 따옴표로 감싸는 것이 일반적이지만, 작은 따옴표를 사용할 수 있다.</p>
+        <p>속성의 값에 큰 따옴표가 사용되어야 하는 경우 작은 따옴표로 감쌀 수 있다.</p>
 
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <div class="w3-code htmlHigh notranslate">
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
                 &lt;p&nbsp;title='John&nbsp;"ShotGun"&nbsp;Nelson'&gt;<br>
+            </div>
         </div>
-</div>
 
-<p>또는 반대로</p>
+        <p>또는 반대로</p>
 
 
-<div class="w3-panel w3-card-2 w3-light-grey">
-        <div class="w3-code htmlHigh notranslate">
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
                 &lt;p&nbsp;title="John&nbsp;'ShotGun'&nbsp;Nelson"&gt;<br>
+            </div>
         </div>
-</div>
 
-<hr>
-<h2>챕터 요약</h2>
-<ul>
-    <li>모든 요소는 <b>속성</b>을 가질 수 있다.</li>
-    <li><b>title</b>속성은 "툴팁"정보를 추가할 때 사용한다.</li>
-    <li><b>href</b>속성은 링크의 주소 정보를 나타낸다.</li>
-    <li><b>width</b>와 <b>height</b>속성은 이미지의 크기를 나타낸다.</li>
-    <li><b>alt</b>속성은 스크린 리더기를 위하여 사용된다. 이미지가 표시되지 않을 때 사용되기도 한다.</li>
-    <li>우리는 항상 속성명에 <b>소문자</b>를 사용한다.</li>
-    <li>우리는 항상 속성의 값에 <b>따옴표</b>를 사용한다.</li>
-</ul>
-
-
-<hr>  
-<h2>HTML 속성들(Attributes)</h2>
-<p>아래는 HTML에서 주로 사용하는 속성들을 알파벳 순으로 보여주는 표다.</p>
-
-<table class="w3-table w3-striped w3-border">
-    <tr>
-        <th>속성</th>
-        <th>설명</th>
-    </tr>
-    <tr>
-        <td>alt</td>
-        <td>이미지가 출력되지 않을 때 대체되는 텍스트를 명시한다.</td>
-    </tr>
-    <tr>
-        <td>disabled</td>
-        <td>input 요소가 사용되지 않을 때 명시한다.</td>
-    </tr>
-    <tr>
-        <td>href</td>
-        <td>링크의 URL(웹 주소)를 명시한다.</td>
-    </tr>
-    <tr>
-        <td>id</td>
-        <td>요소의 유일한 id를 명시한다.</td>
-    </tr>
-    <tr>
-        <td>src</td>
-        <td>이미지의 URL(웹 주소)를 명시한다.</td>
-    </tr>
-    <tr>
-        <td>style</td>
-        <td>요소의 inline CSS(내부 CSS) 스타일을 명시한다.</td>
-    </tr>
-    <tr>
-        <td>title</td>
-        <td>요소의 부가적인 정보를 명시한다. (툴팁으로 표시된다.)</td>
-    </tr>
-</table>
-<!--여기까지 -->
-
-<hr>
-<h1 id="HTML-Headings">HTML Headings(제목)</h1>
-
-
-
-
-
-<hr>
-<h1 id="HTML-Paragraphs">HTML Paragraphs(문단)</h1>
-
-
-
-
-
-
-
-
-
-<hr>
-<h1 id="HTML-Styles">HTML Styles(스타일)</h1>
-
-
-
-
-
-
-
-
-
-
-<hr>
-<h1 id="HTML-Formatting">HTML Formatting()</h1>
-
-
-
-
-
-
-
-
-
-<hr>
-<h1 id="HTML-Quotations">HTML Quotations(인용문)</h1>
-
-
-
-
-
-
-
-
-
-
-<hr>
-<h1 id="HTML-Comments">HTML Comments(주석)</h1>
-
-
-
-
-
-
-
-
-<hr>
-<h1 id="HTML-Colors">HTML Colors(색)</h1>
-
-
-
-
-<hr>
-<h1 id="HTML-CSS">HTML CSS</h1>
-
-
-<hr>
-<h1 id="HTML-Links">HTML Links(링크)</h1>
-<h1 id="HTML-Images"></h1>
-<h1 id="HTML-Tables"></h1>
-<h1 id="HTML-Lists"></h1>
-<h1 id="HTML-Blocks"></h1>
-<h1 id="HTML-Classes"></h1>
-<h1 id="HTML-File-Paths"></h1>
-<h1 id="HTML-Head"></h1>
-<h1 id="HTML-Form-Elements"></h1>
-<h1 id="HTML-Input-Types"></h1>
-<h1 id="HTML-Input-Attribues"></h1>
-
-
-
-
-</div>
+        <hr>
+        <h2>챕터 요약</h2>
+        <ul>
+            <li>모든 요소는 <b>속성</b>을 가질 수 있다.</li>
+            <li><b>title</b>속성은 "툴팁"정보를 추가할 때 사용한다.</li>
+            <li><b>href</b>속성은 링크의 주소 정보를 나타낸다.</li>
+            <li><b>width</b>와 <b>height</b>속성은 이미지의 크기를 나타낸다.</li>
+            <li><b>alt</b>속성은 스크린 리더기를 위하여 사용된다. 이미지가 표시되지 않을 때 사용되기도 한다.</li>
+            <li>우리는 항상 속성명에 <b>소문자</b>를 사용한다.</li>
+            <li>우리는 항상 속성의 값에 <b>따옴표</b>를 사용한다.</li>
+        </ul>
+
+
+        <hr>
+        <h2>HTML 속성들(Attributes)</h2>
+        <p>아래는 HTML에서 주로 사용하는 속성들을 알파벳 순으로 보여주는 표다.</p>
+
+        <table class="w3-table w3-striped w3-border">
+            <tr>
+                <th>속성</th>
+                <th>설명</th>
+            </tr>
+            <tr>
+                <td>alt</td>
+                <td>이미지가 출력되지 않을 때 대체되는 텍스트를 명시한다.</td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>input 요소가 사용되지 않을 때 명시한다.</td>
+            </tr>
+            <tr>
+                <td>href</td>
+                <td>링크의 URL(웹 주소)를 명시한다.</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>요소의 유일한 id를 명시한다.</td>
+            </tr>
+            <tr>
+                <td>src</td>
+                <td>이미지의 URL(웹 주소)를 명시한다.</td>
+            </tr>
+            <tr>
+                <td>style</td>
+                <td>요소의 inline CSS(내부 CSS) 스타일을 명시한다.</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>요소의 부가적인 정보를 명시한다. (툴팁으로 표시된다.)</td>
+            </tr>
+        </table>
+
+
+        <hr>
+        <h1 id="HTML-Headings">HTML Headings(제목)</h1>
+
+        <hr>
+        <h2>HTML Headings(제목)</h2>
+        <p>제목은 &lt;<span>h1</span>&gt;에서 &lt;<span>h6</span>&gt;까지 있다.</p>
+        <p>&lt;<span>h1</span>&gt;은 가장 중요한 제목이다. &lt;<span>h6</span>&gt;는 가장 덜 중요한 제목이다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;h1&gt;This&nbsp;is&nbsp;heading&nbsp;1&lt;/h1&gt;<br> &lt;h2&gt;This&nbsp;is&nbsp;heading&nbsp;2&lt;/h2&gt;
+                <br> &lt;h3&gt;This&nbsp;is&nbsp;heading&nbsp;3&lt;/h3&gt;
+                <br> &lt;h4&gt;This&nbsp;is&nbsp;heading&nbsp;4&lt;/h4&gt;
+                <br> &lt;h5&gt;This&nbsp;is&nbsp;heading&nbsp;5&lt;/h5&gt;
+                <br> &lt;h6&gt;This&nbsp;is&nbsp;heading&nbsp;6&lt;/h6&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p><strong>Note: </strong>브라우저는 자동으로 제목의 위와 아래에 공간(margin)을 넣는다.</p>
+        </div>
+
+
+
+        <hr>
+        <h2>제목은 중요합니다.</h2>
+        <p>검색 엔진은 우리의 웹 페이지의 콘텐트와 구조를 인덱스 하기 위해 제목을 사용한다.</p>
+        <p>사용자들은 우리의 페이지를 제목을 통해 훑어본다. 문서의 구조를 보여주는데 제목을 사용하는 것은 중요하다.</p>
+        <p>&lt;<span>h1</span>&gt;제목은 주요 제목으로 사용되어야 한다. 그 다음 &lt;<span>h2</span>&gt;, 그 다음&lt;<span>h3</span>&gt; 순으로 사용되어야한다.</p>
+
+
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p><strong>Note: </strong>HTML 제목은 제목을 나타내는 데만 사용해야 한다. 텍스트를 크거나 굵게 나타내기 위해 사용되어선 안된다.</p>
+        </div>
+
+        <hr>
+        <h2>HTML 수평 격자</h2>
+        <p>&lt;<span>hr</span>&gt;는 HTML 페이지에서 주제를 분리 할 때 사용한다. 브라우저에서는 보통 수평 격자로 보여준다.</p>
+        <p>&lt;<span>hr</span>&gt;는 콘텐트를 구분할 때 (또는 변경을 알릴 때) 사용한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;h1&gt;This&nbsp;is&nbsp;heading&nbsp;1&lt;/h1&gt;<br> &lt;p&gt;This&nbsp;is&nbsp;some&nbsp;text.&lt;/p&gt;
+                <br> &lt;hr&gt;
+                <br> &lt;h2&gt;This&nbsp;is&nbsp;heading&nbsp;2&lt;/h2&gt;
+                <br> &lt;p&gt;This&nbsp;is&nbsp;some&nbsp;other&nbsp;text.&lt;/p&gt;
+                <br> &lt;hr&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings_hr" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+
+
+
+
+        <hr>
+        <h2>HTML &lt;head&gt; 요소</h2>
+        <p>HTML <strong>&lt;head&gt;</strong>요소는 HTML heading(제목)과 관련이 없다.</p>
+        <p>&lt;head&gt; 요소는 메타데이터를 담는다. HTML 메타데이터는 HTML문서에 관한 데이터 이다. 메타데이터는 화면에 출력되지 않는다.</p>
+        <p>&lt;head&gt; 요소는 &lt;<span>html</span>&gt; 태그와 &lt;<span>body</span>&gt; 태그 사이에 위치한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;<br> &lt;html&gt;
+                <br>
+                <br> &lt;head&gt;
+                <br> &nbsp;&nbsp;&lt;title&gt;My&nbsp;First&nbsp;HTML&lt;/title&gt;
+                <br> &nbsp;&nbsp;&lt;meta&nbsp;charset="UTF-8"&gt;
+                <br> &lt;/head&gt;
+                <br>
+                <br> &lt;body&gt;
+                <br> .
+                <br> .
+                <br> .
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings_head" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p><strong>Note: </strong>메타데이터는 title, character set, style, link, script 등의 메타 정보이다. </p>
+        </div>
+
+
+        <hr>
+        <h2>어떻게 HTML 소스를 볼 수 있을까?</h2>
+        <h3>HTML 소스 코드 보기 :</h3>
+        <p>페이지에서 마우스 오른쪽 버튼을 클릭하고 '페이지 소스 보기'를 선택한다.(크롬에서)</p>
+        <h3>HTML 요소 검사하기 :</h3>
+        <p>요소(또는 빈공간)에 마우스 오른쪽 버튼을 클릭하고 "검사"나 "요소 검사" 선택하면 요소가 어떻게 구성되어 있는지 (HTML과 CSS 모두)를 볼 수 있다. HTML과 CSS를 요소와 스타일 판넬에서
+            바로 수정할 수 있다.</p>
+
+
+
+        <hr>
+        <h2>HTML 태그 참조</h2>
+        <table class="w3-table w3-striped w3-border">
+            <tr>
+                <th>태그</th>
+                <th>설명</th>
+            </tr>
+            <tr>
+                <td>&lt;<span>html</span>&gt;</td>
+                <td>HTML 문서의 루트를 정의한다.</td>
+            </tr>
+            <tr>
+                <td>&lt;<span>body</span>&gt;</td>
+                <td>문서의 몸체를 정의한다.</td>
+            </tr>
+            <tr>
+                <td>&lt;<span>head</span>&gt;</td>
+                <td>모든 헤드 요소(title, script, style, meta 등)를 담는 요소이다.</td>
+            </tr>
+            <tr>
+                <td>&lt;<span>h1</span>&gt; ~ &lt;<span>h6</span>&gt;</td>
+                <td>제목을 정의한다.</td>
+            </tr>
+            <tr>
+                <td>&lt;<span>hr</span>&gt;</td>
+                <td>콘텐트를 구분할 때 사용한다.</td>
+            </tr>
+        </table>
+
+
+
+
+        <hr>
+        <h1 id="HTML-Paragraphs">HTML Paragraphs(문단)</h1>
+        <h2>HTML Paragraphs(문단)</h2>
+        <p>HTML <strong>&lt;<span>p</span>&gt;</strong> 요소는 <strong>문단</strong>을 정의한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;<br> &lt;p&gt;This&nbsp;is&nbsp;another&nbsp;paragraph.&lt;/p&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_paragraphs1" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p><strong>Note: </strong>브라우저는 자동으로 문단 사이에 빈 공간을 넣는다.(마진 margin)</p>
+        </div>
+        <hr>
+        <h2>HTML 출력</h2>
+        <p>우리는 HTML이 어떻게 출력되는지 확신할 수 없다.</p>
+        <p>크거나 작은 스크린, 창의 사이즈 조절은 다른 결과를 낳는다.</p>
+        <p>HTML에서 우리는 공백과 라인을 추가 하면서 출력을 변경시킬 수 없다.</p>
+        <p>브라우저는 추가된 공백과 라인을 모두 제거한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;<br> This&nbsp;paragraph
+                <br> contains&nbsp;a&nbsp;lot&nbsp;of&nbsp;lines
+                <br> in&nbsp;the&nbsp;source&nbsp;code,
+                <br> but&nbsp;the&nbsp;browser&nbsp;
+                <br> ignores&nbsp;it.
+                <br> &lt;/p&gt;
+                <br>
+                <br> &lt;p&gt;
+                <br> This&nbsp;paragraph
+                <br> contains&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;lot&nbsp;of&nbsp;spaces
+                <br> in&nbsp;the&nbsp;source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code,
+                <br> but&nbsp;the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;browser&nbsp;
+                <br> ignores&nbsp;it.
+                <br> &lt;/p&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_paragraphs2" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>종료 태그를 잊지 마세요.</h2>
+        <p>대부분의 브라우저는 종료 태그를 작성하지 않을 때에도 제대로 보여주기도 한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.<br> &lt;p&gt;This&nbsp;is&nbsp;another&nbsp;paragraph.
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_paragraphs0" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <p>위의 예제는 대부분의 브라우저에서 제대로 작동하지만, 여기에 의존하면 안된다.</p>
+
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p><strong>Note: </strong>종료 태그를 생략하는 것은 의도하지 않은 결과나 에러가 발생 시킨다.</p>
+        </div>
+
+
+        <hr>
+        <h2>HTML 라인 브레이크</h2>
+        <p>HTML <strong>&lt;<span>br</span>&gt;</strong> 요소는 <strong>라인 브레이크</strong>을 정의한다.</p>
+        <p>만약 새로운 문단을 시작하지 않고 라인을 끝내고 새로운 줄에 출력하기 위해서는 &lt;<span>br</span>&gt;를 사용하라. </p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!DOCTYPE&nbsp;html&gt;<br> &lt;html&gt;
+                <br> &lt;body&gt;
+                <br>
+                <br> &lt;h1&gt;My&nbsp;First&nbsp;Heading&lt;/h1&gt;
+                <br> &lt;p&gt;My&nbsp;first&nbsp;paragraph.&lt;/p&gt;
+                <br>
+                <br> &lt;/body&gt;
+                <br> &lt;/html&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_paragraphs" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+        <p>&lt;<span>br</span>&gt;태그는 빈요소이다. 즉 종료 태그가 없다.</p>
+
+
+        <hr>
+        <h2>시(poem) 표현 문제</h2>
+        <p>시는 모두 한줄로 출력된다.</p>
+
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;<br> &nbsp;&nbsp;My&nbsp;Bonnie&nbsp;lies&nbsp;over&nbsp;the&nbsp;ocean.
+                <br>
+                <br> &nbsp;&nbsp;My&nbsp;Bonnie&nbsp;lies&nbsp;over&nbsp;the&nbsp;sea.
+                <br>
+                <br> &nbsp;&nbsp;My&nbsp;Bonnie&nbsp;lies&nbsp;over&nbsp;the&nbsp;ocean.
+                <br>
+                <br> &nbsp;&nbsp;Oh,&nbsp;bring&nbsp;back&nbsp;my&nbsp;Bonnie&nbsp;to&nbsp;me.
+                <br> &lt;/p&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_poem" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+
+        <hr>
+        <h2>HTML &lt;pre&gt; 요소</h2>
+        <p>HTML &lt;pre&gt; 요소는 이미 형식이 갖춰진 텍스트를 정의한다. </p>
+
+        <p>&lt;pre&gt;요소안의 텍스트는 고정된 너비의 폰트로 출력되고, 공백과 라인브레이크를 입력한대로 출력한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;pre&gt;<br> &nbsp;&nbsp;My&nbsp;Bonnie&nbsp;lies&nbsp;over&nbsp;the&nbsp;ocean.
+                <br>
+                <br> &nbsp;&nbsp;My&nbsp;Bonnie&nbsp;lies&nbsp;over&nbsp;the&nbsp;sea.
+                <br>
+                <br> &nbsp;&nbsp;My&nbsp;Bonnie&nbsp;lies&nbsp;over&nbsp;the&nbsp;ocean.
+                <br>
+                <br> &nbsp;&nbsp;Oh,&nbsp;bring&nbsp;back&nbsp;my&nbsp;Bonnie&nbsp;to&nbsp;me.
+                <br> &lt;/pre&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_pre" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+        <hr>
+        <h2>HTML 태그 참조</h2>
+        <table class="w3-table w3-striped w3-border">
+            <tr>
+                <th>태그</th>
+                <th>설명</th>
+            </tr>
+            <tr>
+                <td>&lt;<span>p</span>&gt;</td>
+                <td>문단을 정의한다.</td>
+            </tr>
+            <tr>
+                <td>&lt;<span>br</span>&gt;</td>
+                <td>라인 브레이크, 새로운 줄을 삽입한다.</td>
+            </tr>
+            <tr>
+                <td>&lt;<span>pre</span>&gt;</td>
+                <td>이미 형식이 갖춰진 텍스트를 정의한다.</td>
+            </tr>
+
+        </table>
+
+
+        <hr>
+        <h1 id="HTML-Styles">HTML Styles(스타일)</h1>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                <p style="color:red;">I&nbsp;am&nbsp;Red</p>
+                <p style="color:blue;">I&nbsp;am&nbsp;Blue</p>
+                <p style="font-size:36px;">I&nbsp;am&nbsp;Big</p>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_intro" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>HTML style 속성(attribute)</h2>
+        <p>요소의 스타일을 지정하기 위해 <strong>style 속성</strong>을 사용한다.</p>
+        <p>HTML style 속성은 아래 <strong>문법</strong>을 따른다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
+                &lt;tagname&nbsp;style="<em>property:value;</em>"&gt;<br>
+            </div>
+        </div>
+        <p><strong>property</strong>는 CSS 속성(property)이고 <strong>value</strong>는 CSS 값(value)이고</p>
+
+
+
+        <hr>
+        <h2>HTML 배경 색</h2>
+
+        <p><strong>background-color</strong> 속성(property)는 요소의 배경색을 정의한다.</p>
+        <p>페이지의 배경을 파우더블루로 변경하는 예제이다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;body&nbsp;style="background-color:powderblue;"&gt;<br>
+                <br> &lt;h1&gt;This&nbsp;is&nbsp;a&nbsp;heading&lt;/h1&gt;
+                <br> &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;
+                <br>
+                <br> &lt;/body&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_background-color" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>HTML 텍스트 색</h2>
+        <p><strong>color</strong>속성은 텍스트의 색을 지정하는데 사용한다. </p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;h1&nbsp;style="color:blue;"&gt;This&nbsp;is&nbsp;a&nbsp;heading&lt;/h1&gt;<br> &lt;p&nbsp;style="color:red;"&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_color" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>HTML 글자체(font)</h2>
+        <p><strong>font-family</strong>속성은 요소의 글자체(font)를 지정한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;h1&nbsp;style="font-family:verdana;"&gt;This&nbsp;is&nbsp;a&nbsp;heading&lt;/h1&gt;<br> &lt;p&nbsp;style="font-family:courier;"&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_color" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+
+        <h2>HTML 텍스트 크기</h2>
+        <p><strong>font-size</strong>속성은 요소의 텍스트 크기를 정할 때 사용한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;h1&nbsp;style="font-size:300%;"&gt;This&nbsp;is&nbsp;a&nbsp;heading&lt;/h1&gt;<br> &lt;p&nbsp;style="font-size:160%;"&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_font-size" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>HTML 텍스트 정렬</h2>
+        <p><strong>text-align</strong>속성은 HTML 요소의 수평 정렬을 정의할 때 사용한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;h1&nbsp;style="text-align:center;"&gt;Centered&nbsp;Heading&lt;/h1&gt;<br> &lt;p&nbsp;style="text-align:center;"&gt;Centered&nbsp;paragraph.&lt;/p&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_text-align" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+        <hr>
+        <h2>챕터 요약</h2>
+        <ul>
+            <li>요소를 꾸밀 때 <strong>style</strong> 속성(attribute)를 사용한다.</li>
+            <li>배경 색을 정할 때 <strong>background-color</strong>를 사용한다.</li>
+            <li>텍스트의 색을 정할 때 <strong>color</strong>를 사용한다.</li>
+            <li>텍스트의 글자체를 정할 때 <strong>font-family</strong>를 사용한다.</li>
+            <li>텍스트의 크기를 정할 때 <strong>font-size</strong>를 사용한다.</li>
+            <li>텍스트를 정렬할 때 <strong>text-align</strong>를 사용한다.</li>
+        </ul>
+
+        <hr>
+        <h1 id="HTML-Formatting">HTML Formatting(텍스트의 서식)</h1>
+        <hr>
+        <h2>HTML 서식 요소</h2>
+        <p>이전 챕터에서, 우리는 HTML <strong>style 속성</strong>을 배웠다.</p>
+        <p>HTML에는 텍스트에 특별한 <strong>의미</strong> 정해주는 특별한 <strong>요소</strong>가 있다.</p>
+        <p>HTML에서 출력을 <b>굵게</b> 또는 <i>기울임</i>으로 하기 위해 &lt;b&gt;와 &lt;i&gt;를 사용한다. </p>
+        <p>텍스트를 특별한 형식으로 출력하기위한 서식 요소들 :</p>
+        <ul>
+            <li>&lt;b&gt; - 굵은 텍스트</li>
+            <li>&lt;strong&gt; - 중요한 텍스트</li>
+            <li>&lt;i&gt; - 기울임 텍스트(이탤릭체)</li>
+            <li>&lt;em&gt; - 강조한 텍스트</li>
+            <li>&lt;mark&gt; - 마크한 텍스트</li>
+            <li>&lt;small&gt; - 작은 텍스트</li>
+            <li>&lt;del&gt; - 지워진 텍스트</li>
+            <li>&lt;ins&gt; - 삽입된 텍스트</li>
+            <li>&lt;sub&gt; - 아래첨자 텍스트</li>
+            <li>&lt;sup&gt; - 위첨자 텍스트</li>
+        </ul>
+
+        <hr>
+        <h2>HTML &lt;b&gt; 와 &lt;strong&gt;요소</h2>
+
+        <p>HTML <b>&lt;b&gt;</b> 요소는 <b>굵은</b> 텍스트를 나타낸다. 어떤 부가적인 강조는 없다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;b&gt;This&nbsp;text&nbsp;is&nbsp;bold&lt;/b&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_b" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+        <p>HTML <strong>&lt;strong&gt;</strong> 요소는 <strong>중요한</strong> 텍스트를 나타낸다. "중요하다"는 의미가 부여된다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;strong&gt;This&nbsp;text&nbsp;is&nbsp;strong&lt;/strong&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_strong" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>HTML &lt;i&gt; 와 &lt;em&gt;요소</h2>
+        <p>HTML <b>&lt;i&gt;</b> 요소는 <i>기울인(이탤릭체)</i> 텍스트를 나타낸다. 어떤 부가적인 강조는 없다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;i&gt;This&nbsp;text&nbsp;is&nbsp;italic&lt;/i&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_i" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <p>HTML <strong>&lt;em&gt;</strong> 요소는 <em>강조할</em> 텍스트를 나타낸다. "중요하다"는 의미가 부여된다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;em&gt;This&nbsp;text&nbsp;is&nbsp;emphasized&lt;/em&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_em" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+            <p><strong>Note: </strong> 브라우저는 &lt;strong&gt;를 &lt;b&gt;처럼, &lt;em&gt;를 &lt;i&gt;처럼 출력한다. 하지만 이 태그들은 서로 다른 의미를
+                가지고 있다. &lt;b&gt;와 &lt;i&gt;는 텍스트를 굵게 또는 기울이게 출력하도록만 하지만, &lt;strong&gt;와 &lt;em&gt; 는 텍스트가 "중요하다"는 의미를 준다.</p>
+        </div>
+
+        <hr>
+        <h2>HTML &lt;small&gt; 요소</h2>
+
+        <p>HTML <b>&lt;small&gt;</b>요소는 <small>좀더 작은</small> 텍스트를 정의한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;h2&gt;HTML&nbsp;&lt;small&gt;Small&lt;/small&gt;&nbsp;Formatting&lt;/h2&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_small" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>HTML &lt;mark&gt; 요소</h2>
+
+        <p>HTML <b>&lt;mark&gt;</b>요소는
+            <mark>마크된</mark> 또는
+            <mark>하이라이트된</mark> 텍스트를 정의한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;h2&gt;HTML&nbsp;&lt;mark&gt;Marked&lt;/mark&gt;&nbsp;Formatting&lt;/h2&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_mark" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>HTML &lt;del&gt; 요소</h2>
+
+        <p>HTML <b>&lt;del&gt;</b>요소는
+            <del>삭제된</del> 텍스트를 정의한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;My&nbsp;favorite&nbsp;color&nbsp;is&nbsp;&lt;del&gt;blue&lt;/del&gt;&nbsp;red.&lt;/p&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_del" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>HTML &lt;ins&gt; 요소</h2>
+
+        <p>HTML <b>&lt;ins&gt;</b>요소는
+            <ins>삽입된</ins> 텍스트를 정의한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;My&nbsp;favorite&nbsp;&lt;ins&gt;color&lt;/ins&gt;&nbsp;is&nbsp;red.&lt;/p&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_ins" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>HTML &lt;sub&gt; 요소</h2>
+
+        <p>HTML <b>&lt;sub&gt;</b>요소는 <sub>아래 첨자된</sub> 텍스트를 정의한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;This&nbsp;is&nbsp;&lt;sub&gt;subscripted&lt;/sub&gt;&nbsp;text.&lt;/p&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_sub" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <hr>
+        <h2>HTML &lt;sup&gt; 요소</h2>
+
+        <p>HTML <b>&lt;sup&gt;</b>요소는 <sup>위 첨자된</sup> 텍스트를 정의한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;This&nbsp;is&nbsp;&lt;sup&gt;superscripted&lt;/sup&gt;&nbsp;text.&lt;/p&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_sup" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+
+        <hr>
+        <h1 id="HTML-Quotations">HTML Quotations(인용문)</h1>
+
+        <hr>
+        <h2>HTML &lt;q&gt; - 짧은 인용문</h2>
+        <p>HTML &lt;q&gt;는 짧은 인용문을 정의할 때 사용한다.</p>
+        <p>브라우저는 주로 &lt;q&gt;요소 앞뒤에 따옴표를 첨가한다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;WWF's&nbsp;goal&nbsp;is&nbsp;to:&nbsp;&lt;q&gt;Build&nbsp;a&nbsp;future&nbsp;where&nbsp;people&nbsp;live&nbsp;in&nbsp;harmony&nbsp;with&nbsp;nature.&lt;/q&gt;&lt;/p&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_q" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+
+        <hr>
+        <h2>HTML &lt;blockquote&gt; - 인용문</h2>
+        <p>HTML &lt;blockquote&gt;는 인용문을 정의할 때 사용한다.</p>
+        <p>브라우저는 주로 &lt;blockquote&gt;요소를 들여쓰기 한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;p&gt;Here&nbsp;is&nbsp;a&nbsp;quote&nbsp;from&nbsp;WWF's&nbsp;website:&lt;/p&gt;<br> &lt;blockquote&nbsp;cite="http://www.worldwildlife.org/who/index.html"&gt;
+                <br> For&nbsp;50&nbsp;years,&nbsp;WWF&nbsp;has&nbsp;been&nbsp;protecting&nbsp;the&nbsp;future&nbsp;of&nbsp;nature.
+                <br> The&nbsp;world's&nbsp;leading&nbsp;conservation&nbsp;organization,
+                <br> WWF&nbsp;works&nbsp;in&nbsp;100&nbsp;countries&nbsp;and&nbsp;is&nbsp;supported&nbsp;by
+                <br> 1.2&nbsp;million&nbsp;members&nbsp;in&nbsp;the&nbsp;United&nbsp;States&nbsp;and
+                <br> close&nbsp;to&nbsp;5&nbsp;million&nbsp;globally.
+                <br> &lt;/blockquote&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_blockquote" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+
+
+
+
+
+        <hr>
+        <h1 id="HTML-Comments">HTML Comments(주석)</h1>
+        <h2>HTML 주석(comment) 태그</h2>
+        <p>HTML 소스에 아래 문법을 이용하여 주석을 작성할 수 있다.</p>
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!--&nbsp;여기에&nbsp;주석을&nbsp;작성하세요.&nbsp;--&gt;<br>
+            </div>
+        </div>
+
+        <p>브라우저는 주석을 화면에 출력하지 않는다. HTML 소스 코드를 작성할 때 유용하다.</p>
+        <p>주석을 사용해서 알려야할 내용이나 기억해야할 내요을 작성할 수 있다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!--&nbsp;이&nbsp;것은&nbsp;주석입니다.&nbsp;--&gt;<br>
+                <br> &lt;p&gt;This&nbsp;is&nbsp;a&nbsp;paragraph.&lt;/p&gt;
+                <br>
+                <br> &lt;!--&nbsp;더&nbsp;많은&nbsp;내용을&nbsp;작성해야&nbsp;함.&nbsp;--&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_comment" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+        <p>주석은 HTML 디버깅할 때 유용하다. HTML 코드 몇 줄을 한 번에 주석 처리 할 수 있기 때문에 에러를 찾는데 유용하게 사용할 수 있다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;!--&nbsp;디버깅을&nbsp;위해&nbsp;잠시&nbsp;주석&nbsp;처리함.<br> &lt;img&nbsp;border="0"&nbsp;src="pic_mountain.jpg"&nbsp;alt="Mountain"&gt;
+                <br> --&gt;
+                <br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_comment_out" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+        </div>
+
+
+
+
+        <hr>
+        <h1 id="HTML-Colors">HTML Colors(색)</h1>
+
+        <h2>색 명칭</h2>
+        <p>HTML에서 색은 명칭을 사용해서 작성할 수 있다.</p>
+        <p>HTML은 <a target="_blank" href="https://www.w3schools.com/colors/colors_names.asp">140개의 표준 색 명칭</a>   을 지원한다.</p>
+
+        <hr>
+        <h2>RGB 값</h2>
+        <p>HTML에서 색은 RGB 값으로 작성할 수 있다. 작성법 : rgb(red, green, blue)</p>
+        <p>각 파라미터(red, green, blue)는 0에서 255사이의 색의 양(intensity)을 정의한다.</p>
+        <p>예를 들어, rgb(255, 0, 0)은 빨간색을 표현한다. red의 값이 255로 가장 많은 양이 첨가되고 다른 색은 0, 즉 전혀 첨가되지 않았기 때문이다.</p>
+        <p>검은색을 표현하기 위해서는 세가지 모든 색이 0이 되어야 한다. 즉, rgb(0, 0, 0)으로 작성한다.</p>
+        <p>하얀색을 표현하기 위해서는 세가지 모든 색이 255이 되어야 한다. 즉, rgb(255, 255, 255)로 작성한다.</p>
+
+        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_colorrgb" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+        
+        <p>회색을 표현하기 위해서는 세가지 색이 같은 양이 정의 되어야 한다. </p>
+        
+        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_colorgrayrgb" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+        
+
+        <hr>
+        <h2>HEX 값</h2>
+        <p>HTML에서 색은 16진수(hexadecimal)의 값으로 표현할 수 있다. 작성법 : #RRGGBB</p>
+        <p>RR은 red, GG는 green, BB는 blue의 16진수 값 00에서 FF까지다 (10진수로 0에서 255까지)</p>
+        <p>예를 들어, #FF0000은 빨간색을 나타낸다. red가 가장 높은 값인 FF를 가지고 나머지 두개의 값이 00이기 때문이다.</p>
+        
+        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_colorhex" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+
+
+        <p>회색을 표현하기 위해 세가지 색이 같은 양이 정의 되어야 한다.</p>
+        <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_colorgray" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+  
+
+        <hr>
+        <h1 id="HTML-CSS">HTML CSS</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <!--여기까지 -->
+
+        <hr>
+        <h1 id="HTML-Links">HTML Links(링크)</h1>
+        <h1 id="HTML-Images"></h1>
+        <h1 id="HTML-Tables"></h1>
+        <h1 id="HTML-Lists"></h1>
+        <h1 id="HTML-Blocks"></h1>
+        <h1 id="HTML-Classes"></h1>
+        <h1 id="HTML-File-Paths"></h1>
+        <h1 id="HTML-Head"></h1>
+        <h1 id="HTML-Form-Elements"></h1>
+        <h1 id="HTML-Input-Types"></h1>
+        <h1 id="HTML-Input-Attribues"></h1>
+
+
+
+
+    </div>
 </body>
+
 </html>
