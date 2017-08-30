@@ -1514,18 +1514,97 @@
         <p>아래 예제는 URL전체를 사용하여 스타일 시트를 link 하는 방법을 보여준다.</p>
 
         <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;link&nbsp;rel="stylesheet"&nbsp;href="https://www.w3schools.com/html/styles.css"&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_external_url" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+        </div>
+
+        <p>이 예제는 현재 웹 사이트의 html 폴더에 위치한 스타일 시트를 연결한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;link&nbsp;rel="stylesheet"&nbsp;href="/html/styles.css"&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_external_relative" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>
+        </div>
+
+        <p>이 예제는 현재 페이지와 같은 폴더에 위치한 스타일 시트를 연결한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+            <h3>Example</h3>
+            <div class="w3-code htmlHigh notranslate">
+                &lt;link&nbsp;rel="stylesheet"&nbsp;href="styles.css"&gt;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_external" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
+    </div>
+
+
+    <hr>
+    <h2>챕터 요약</h2>
+
+    <ul>
+        <li><b>style</b> 속성은 인라인 스타일을 정의한다.</li>
+        <li><b>&lt;style&gt;</b> 요소는 내부 CSS 정의한다.</li>
+        <li><b>&lt;link&gt;</b> 요소는 외부 CSS 파일을 참조하도록한다. </li>
+        <li><b>&lt;head&gt;</b> 요소는 &lt;style&gt; 와 &lt;link&gt; 요소를 가질 수 있다.</li>
+        <li>CSS <b>color</b> 속성(property)는 텍스트 색을 변경할 수 있다.</li>
+        <li>CSS <b>font-family</b> 속성(property)는 텍스트 글자체를 변경할 수 있다.</li>
+        <li>CSS <b>font-size</b> 속성(property)는 텍스트 크기를 변경할 수 있다.</li>
+        <li>CSS <b>border</b> 속성(property)는 요소의 테두리를 변경할 수 있다.</li>
+        <li>CSS <b>padding</b> 속성(property)는 내부 공간(컨텐트와 테두리와의 간격)을 변경할 수 있다.</li>
+        <li>CSS <b>margin</b> 속성(property)는 외부 공간(요소간의 간격)을 변경할 수 있다.</li>
+        
+        
+    </ul>
+
+        <hr>
+        <h1 id="HTML-Links">HTML Links(링크)</h1>
+
+        <h2>HTML Links(링크) - HyperLinks</h2>
+        
+        <p>링크를 클릭해서 다른 문서로 이동 할 수 있다.</p>
+        <p>마우스 커서를 링크 위에 올리면 손가락 모양으로 바뀐다.</p>
+
+        <div class="w3-panel w3-pale-yellow w3-leftbar w3-border-yellow">
+                <p><strong>Note: </strong>링크는 텍스트 뿐 아니라, 이미지나 다른 요소가 될 수 있다.</p>
+        </div>
+
+
+        <hr>
+        <h2>HTML 링크 - 문법</h2>
+        <p>HTML에서 링크는 <b>&lt;a&gt;</b>태그를 사용한다.</p>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
+                <div class="w3-code htmlHigh notranslate">
+                        &lt;a&nbsp;href="<i>url</i>"&gt;<i>link&nbsp;text</i>&lt;/a&gt;<br>
+                </div>
+        </div>
+
+        <div class="w3-panel w3-card-2 w3-light-grey">
                 <h3>Example</h3>
                 <div class="w3-code htmlHigh notranslate">
-                        &lt;link&nbsp;rel="stylesheet"&nbsp;href="https://www.w3schools.com/html/styles.css"&gt;<br>
+                        &lt;a&nbsp;href="https://www.w3schools.com/html/"&gt;Visit&nbsp;our&nbsp;HTML&nbsp;tutorial&lt;/a&gt;<br>
                 </div>
-                <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_external_url" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
+                <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_w3schools" class="w3-btn w3-green w3-margin-bottom">직접해보기 »</a>      
         </div>
+
+
+        <p><b>href</b> 속성은 이동할 주소를 명시한다. (https://www.w3schools.com/html/)</p>
+        <p><b>링크 텍스트</b>는 화면에 출력되는 부분이다. (Visit our HTML tutorial)</p>
+        <p>링크 텍스트를 클릭하면 명시된 주소로 이동한다.</p>
+
+        <hr>
+        <h2>내부 링크 (Local Links)</h2>
+
+        
+
 
 
         <!--여기까지 -->
 
-        <hr>
-        <h1 id="HTML-Links">HTML Links(링크)</h1>
         <h1 id="HTML-Images"></h1>
         <h1 id="HTML-Tables"></h1>
         <h1 id="HTML-Lists"></h1>
