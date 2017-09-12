@@ -1,0 +1,58 @@
+#jumbo-header {
+
+    background-image: url(header_img.jpg);
+    background-repeat: no-repeat;
+}
+
+#jumbo-header h1, #jumbo-header p {
+
+    color: #fff;
+}
+
+
+.image-wrapper {
+
+    width: 160px;
+    text-align: center;
+}
+
+.logo-image {
+
+    height: 140px;
+}
+
+.section-row, .section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section {
+    margin-bottom: 50px;
+    width: 48%;
+}
+
+.section-row {
+    margin: 20px;
+}
+
+.section>p {
+    flex: 1;
+    margin-left: 20px;
+}
+
+@media (max-width: 992px) {
+    .section {
+        
+        width: 100%;
+    }
+    .section-row {
+        flex-wrap: wrap;
+    }
+}
+
+.carousel img {
+
+    width: 100%;
+}
+
+

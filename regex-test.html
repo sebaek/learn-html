@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn RegEx</title>
+    <style>
+    form, label, input {
+        display: block;
+    }
+    input:invalid {
+        background-color: red;
+    }
+    
+    
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        // $("#text01").focusout(function() {
+        //     console.log("blur function");
+        //     console.log($(this).val());
+        //     console.log(/[가-힣]*/.test($(this).val()));
+        //     console.log(!/[가-힣]*/.test($(this).val()));
+            
+        //     if (!/[가-힣]+/g.test($(this).val())) {
+        //         alert("한글을 입력해주세요");
+        //         // $(this).focusin();
+        //     }
+        // });
+
+
+    });
+
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <label for="number01">NUMBER</label>
+        <input type="number" name="number" id="number01">
+
+        <label for="email01">EMAIL</label>
+        <input type="email" name="email" id="email01">
+
+        <label for="mypattern">PATTERNTEXT</label>
+        <input type="text" name="text" id="text01" pattern="[가-힣ㄱ-ㅎㅏ-ㅣ ]*" required>
+
+        <input type="submit" value="SUBMIT">
+    </form>
+
+</body>
+
+</html>
