@@ -6,93 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        @font-face {
-            font-family: nbg;
-            src: url("NanumBarunGothic.ttf");
-            /* font-weight: bold; */
+
+    <script>
+        window.onload = function () {
+            function A(m) {
+                if (m == undefined) {
+                    this.m = "c";
+                } else {
+                    this.m = m;
+
+                }
+                return this;
+            }
+
+            var a = new A("b");
+            var b = A();
+
+            console.log(a);
+            console.log(b);
         }
-
-        @font-face {
-            font-family: nbg;
-            src: url("NanumBarunGothicBold.ttf");
-            font-weight: bold;
-        }
-
-        ul {
-            border: 1px solid black;
-        }
-
-        li {
-            /* float: left; */
-            display: inline;
-            border: 1px solid black;
-        }
-
-        div {
-            width: 200px;
-            border: 1px solid black;
-        }
-
-        .first {
-            display: inline-block;
-            height: 300px;
-            background-color: blue;
-        }
-
-        .second {
-            display: inline-block;
-
-            height: 200px;
-            background-color: yellow
-        }
-
-        .third {
-
-            width: 450px;
-            height: 100px;
-            background-color: red;
-            z-index: -100;
-        }
-
-        .vertical-center p {
-            /* line-height: 200px; */
-            text-align: center;
-        }
-    </style>
+    </script>
 </head>
 
 <body>
-    <ul>
-        <li>Lorem, ipsum.</li>
-        <li>Natus, earum.</li>
-        <li>Veniam, hic.</li>
-        <li>Reprehenderit, mollitia.</li>
-    </ul>
-    <p>HELLO</p>
-
-    <div class="first">this is first div</div>
-    <div class="second">this is second div</div>
-    <div class="third">this is third div</div>
-
-    <div class="vertical-center">
-        <p>
-
-            HELLO WORLD!
-
-        </p>
-        <p style="font-family: nbg; font-weight: normal;">안녕하세요</p>
-
-        <p style="font-family: nbg; font-weight: bold;">안녕하세요</p>
-        <p>안녕하세요</p>
-    </div>
-
-    <div>
-        <form>
-            <input type="text" name="" id="" pattern="[a-z]*">
-            <input type="submit" value="CLICK">
-        </form>
-    </div>
 
 </body>
 
